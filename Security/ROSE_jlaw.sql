@@ -1,0 +1,2 @@
+﻿CREATE USER [ROSE\jlaw] FOR LOGIN [ROSE\jlaw];
+

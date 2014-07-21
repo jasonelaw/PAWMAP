@@ -1,0 +1,4 @@
+﻿CREATE TABLE [dbo].[SAMPLE_TYPE]
+(
+	[sample_type] VARCHAR(100) NOT NULL PRIMARY KEY
+)

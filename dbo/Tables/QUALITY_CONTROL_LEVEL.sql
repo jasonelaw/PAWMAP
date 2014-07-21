@@ -1,0 +1,4 @@
+﻿CREATE TABLE [dbo].[QUALITY_CONTROL_LEVEL]
+(
+	[quality_control_level] VARCHAR(30) NOT NULL PRIMARY KEY
+)

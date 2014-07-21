@@ -1,0 +1,4 @@
+﻿CREATE TABLE [dbo].[PROCESS_TYPE]
+(
+	[process_type] VARCHAR(30) NOT NULL PRIMARY KEY
+)

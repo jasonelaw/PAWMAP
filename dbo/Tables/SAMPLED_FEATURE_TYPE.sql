@@ -1,0 +1,4 @@
+﻿CREATE TABLE [dbo].[SAMPLED_FEATURE_TYPE]
+(
+	[sampled_feature_type] VARCHAR(50) NOT NULL PRIMARY KEY
+)

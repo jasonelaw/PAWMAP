@@ -1,0 +1,4 @@
+﻿CREATE TABLE [dbo].[OBSERVATION_STATUS]
+(
+	[observation_status] VARCHAR(20) NOT NULL PRIMARY KEY
+)
