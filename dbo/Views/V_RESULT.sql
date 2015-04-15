@@ -9,10 +9,10 @@
 			Null as result_time_local,
 			Null as result_time_local_offset,
 			qr.observation_id
-		FROM [QUANTITY_RESULT] AS qr
-			INNER JOIN [PHENOMENON] as p1
+		FROM [dbo].[QUANTITY_RESULT] AS qr
+			LEFT JOIN [dbo].[PHENOMENON] as p1
 				ON qr.phenomenon_id = p1.phenomenon_id
-			INNER JOIN [UNIT] as u
+			LEFT JOIN [dbo].[UNIT] as u
 				ON qr.unit_id = u.unit_id
 	
 	UNION ALL
@@ -26,10 +26,10 @@
 			Null as result_time_local,
 			Null as result_time_local_offset,
 			cr.observation_id
-		FROM [CATEGORICAL_RESULT] AS cr
-			INNER JOIN [RESULT_CATEGORY] AS rc
+		FROM [dbo].[CATEGORICAL_RESULT] AS cr
+			LEFT JOIN [dbo].[RESULT_CATEGORY] AS rc
 				ON cr.category_result_id = rc.result_category_id
-			INNER JOIN [PHENOMENON] as p2
+			LEFT JOIN [dbo].[PHENOMENON] as p2
 				ON cr.phenomenon_id = p2.phenomenon_id
 	
 	UNION ALL
@@ -43,8 +43,8 @@
 			Null as result_time_local,
 			Null as result_time_local_offset,
 			cnt.observation_id
-		FROM [COUNT_RESULT] AS cnt
-			INNER JOIN [PHENOMENON] as p3
+		FROM [dbo].[COUNT_RESULT] AS cnt
+			LEFT JOIN [dbo].[PHENOMENON] as p3
 				ON cnt.phenomenon_id = p3.phenomenon_id
 
 	UNION ALL
@@ -58,6 +58,6 @@
 			ts.result_time_local,
 			ts.result_time_local_offset,
 			ts.observation_id
-		FROM [TIME_SERIES_RESULT] AS ts
-			INNER JOIN [UNIT] as u
+		FROM [dbo].[TIME_SERIES_RESULT] AS ts
+			LEFT JOIN [dbo].[UNIT] as u
 				ON ts.unit_id = u.unit_id

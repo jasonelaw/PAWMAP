@@ -14,8 +14,10 @@
 
 GO
 
-CREATE INDEX [IX_QUANTITY_RESULT_phenomenon_id] ON [dbo].[QUANTITY_RESULT] ([phenomenon_id])
+CREATE INDEX [IX_QUANTITY_RESULT_phenomenon_id] 
+	ON [dbo].[QUANTITY_RESULT] ([phenomenon_id])
+	WHERE [phenomenon_id] IS NOT NULL;
 
 GO
 
-CREATE INDEX [IX_QUANTITY_RESULT_unit_id] ON [dbo].[QUANTITY_RESULT] ([unit_id])
+CREATE INDEX [IX_QUANTITY_RESULT_unit_id] ON [dbo].[QUANTITY_RESULT] ([unit_id]);

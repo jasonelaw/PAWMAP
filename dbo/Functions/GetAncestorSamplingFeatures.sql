@@ -5,7 +5,7 @@
 )
 RETURNS TABLE AS RETURN
 (
-	WITH ANCESTORS(from_feature, feature_namespace, feature_identifier, feature_type)
+	WITH ANCESTORS(ancestor_sampling_feature_id, ancestor_feature_namespace, ancestor_feature_identifier, ancestor_feature_type)
 	AS
 	(
 		SELECT REL.[from_sampling_feature_id], sfl.feature_namespace, sfl.feature_identifier, sfl.feature_type
@@ -23,13 +23,13 @@ RETURNS TABLE AS RETURN
 			INNER JOIN SAMPLING_FEATURE AS sfl
 				ON rel.from_sampling_feature_id = sfl.sampling_feature_id	
 			INNER JOIN ANCESTORS AS A1
-				ON REL.[to_sampling_feature_id] = A1.from_feature
+				ON REL.[to_sampling_feature_id] = A1.ancestor_sampling_feature_id
 	)
 	-- Statement that executes the CTE
-	SELECT	D2.from_feature as sampling_feature_id,
-			D2.feature_namespace,
-			D2.feature_identifier,
-			D2.feature_type
+	SELECT	D2.ancestor_sampling_feature_id,
+			D2.ancestor_feature_namespace,
+			D2.ancestor_feature_identifier,
+			D2.ancestor_feature_type
 	FROM ANCESTORS AS D2
 );
 

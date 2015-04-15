@@ -4,7 +4,7 @@
     [phenomenon_id]     INT              NOT NULL,
     [process_id]          INT              NOT NULL,
     [phenomenon_time_start] DATETIME         NOT NULL,
-    [phenomenon_time_end]   DATETIME         NOT NULL ,
+    [phenomenon_time_end]   DATETIME         NULL ,
     [observer]              VARCHAR (255)    NOT NULL,
 	[observation_time]		DATETIME	NOT NULL,
     [observation_uuid]      UNIQUEIDENTIFIER NULL,
@@ -44,5 +44,18 @@ CREATE INDEX [IX_OBSERVATION_sampling_feature_id] ON [dbo].[OBSERVATION] ([sampl
 
 GO
 
-
 CREATE INDEX [IX_OBSERVATION_time] ON [dbo].[OBSERVATION] ([phenomenon_time_start],[phenomenon_time_end])
+
+GO
+
+CREATE INDEX [IX_OBSERVATION_timerev] ON [dbo].[OBSERVATION] ([phenomenon_time_end],[phenomenon_time_start])
+
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'End of observation; allows nulls so that observations which have not ended yet can be stored.',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'OBSERVATION',
+    @level2type = N'COLUMN',
+    @level2name = N'phenomenon_time_end'

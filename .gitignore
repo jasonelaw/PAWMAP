@@ -16,6 +16,7 @@ $RECYCLE.BIN/
 
 # SSDT FOlder Structure
 bin/
+obj/
 Import Schema Logs/
 Security/
 

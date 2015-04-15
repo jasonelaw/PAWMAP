@@ -26,10 +26,10 @@ AS
 			vs.sample_id,
 			vs.collection_process_id,
 			vs.handling_process_id
-		FROM V_SAMPLE AS vs
-			LEFT JOIN FEATURE_PROPERTY AS fp
+		FROM [dbo].[V_SAMPLE] AS vs
+			LEFT JOIN [dbo].[FEATURE_PROPERTY] AS fp
 				ON vs.sampling_feature_id = fp.sampling_feature_id
-			LEFT JOIN GENERIC_PROPERTY AS gp
+			LEFT JOIN [dbo].[GENERIC_PROPERTY] AS gp
 				ON fp.generic_property_id = gp.generic_property_id
 		WHERE	(gp.property_name = @property OR @property IS NULL)
 				AND (fp.property_value = @value OR @value IS NULL)

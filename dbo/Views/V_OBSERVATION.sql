@@ -26,11 +26,11 @@
 				pr.process_id,
 				ph.phenomenon_id
 		FROM	[dbo].[OBSERVATION] AS obs
-				INNER JOIN [dbo].[SAMPLING_FEATURE] sf 
+				LEFT JOIN [dbo].[SAMPLING_FEATURE] sf 
 					ON obs.sampling_feature_id = sf.sampling_feature_id
-				INNER JOIN [dbo].[PHENOMENON] AS ph
+				LEFT JOIN [dbo].[PHENOMENON] AS ph
 					ON obs.[phenomenon_id] = ph.phenomenon_id
-				INNER JOIN [dbo].[PROCESS] AS pr
+				LEFT JOIN [dbo].[PROCESS] AS pr
 					ON [obs].[process_id] = pr.process_id
-				INNER JOIN [dbo].[V_RESULT] as vr
+				LEFT JOIN [dbo].[V_RESULT] as vr
 					ON obs.observation_id = vr.observation_id

@@ -20,10 +20,10 @@ AS
 				vl.longitude,
 				vl.feature_geometry,
 				vl.sampling_feature_id
-			FROM V_LOCATION AS vl
-				LEFT JOIN FEATURE_PROPERTY AS fp
+			FROM [dbo].[V_LOCATION] AS vl
+				LEFT JOIN [dbo].[FEATURE_PROPERTY] AS fp
 					ON vl.sampling_feature_id = fp.sampling_feature_id
-				LEFT JOIN GENERIC_PROPERTY AS gp
+				LEFT JOIN [dbo].[GENERIC_PROPERTY] AS gp
 					ON fp.generic_property_id = gp.generic_property_id
 			WHERE	(gp.property_name = @property OR @property IS NULL)
 					AND (fp.property_value = @value OR @value IS NULL)
@@ -44,10 +44,10 @@ AS
 				vl.longitude,
 				vl.feature_geometry,
 				vl.sampling_feature_id
-			FROM V_LOCATION AS vl
-				LEFT JOIN FEATURE_PROPERTY AS fp
+			FROM [dbo].[V_LOCATION] AS vl
+				LEFT JOIN [dbo].[FEATURE_PROPERTY] AS fp
 					ON vl.sampling_feature_id = fp.sampling_feature_id
-				LEFT JOIN GENERIC_PROPERTY AS gp
+				LEFT JOIN [dbo].[GENERIC_PROPERTY] AS gp
 					ON fp.generic_property_id = gp.generic_property_id
 			WHERE	(gp.property_name = @property OR @property IS NULL)
 					AND (fp.property_value = @value OR @value IS NULL)

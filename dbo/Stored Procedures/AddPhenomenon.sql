@@ -20,21 +20,34 @@ AS
 				@scid [INT];
 			IF @parent_phenomenon IS NOT NULL
 				BEGIN
-					SET @pid =	(SELECT TOP 1 phenomenon_id
-								 FROM PHENOMENON
-								 WHERE phenomenon_code = @parent_phenomenon);
+					SET @pid =	(SELECT TOP 1 [dbo].[PHENOMENON].[phenomenon_id]
+								 FROM [dbo].[PHENOMENON]
+								 WHERE [dbo].[PHENOMENON].[phenomenon_code] = @parent_phenomenon);
 					IF @pid IS NULL
 						RAISERROR('A matching phenomenon for parent phenomenon code (%s) was not found.', 11, 1, @parent_phenomenon)
 				END
 			IF @classification_scheme IS NOT NULL
 				BEGIN
-					SET @scid =	(SELECT TOP 1 classification_scheme_id 
-								 FROM CLASSIFICATION_SCHEME
-								 WHERE scheme_name = @classification_scheme);
+					SET @scid =	(SELECT TOP 1 [dbo].[CLASSIFICATION_SCHEME].[classification_scheme_id] 
+								 FROM [dbo].[CLASSIFICATION_SCHEME]
+								 WHERE [dbo].[CLASSIFICATION_SCHEME].[scheme_name] = @classification_scheme);
 					IF @scid IS NULL
 						RAISERROR('A matching classification scheme for (%s) was not found.', 11, 1, @classification_scheme)
 				END
-			INSERT INTO PHENOMENON ([phenomenon_code],[phenomenon_name],[phenomenon_description],[quantity],[component],[state],[medium],[representation],[parent_phenomenon_id],[result_type], [classification_scheme_id]) 
+			INSERT INTO [dbo].[PHENOMENON] 
+				(
+					[dbo].[PHENOMENON].[phenomenon_code],
+					[dbo].[PHENOMENON].[phenomenon_name],
+					[dbo].[PHENOMENON].[phenomenon_description],
+					[dbo].[PHENOMENON].[quantity],
+					[dbo].[PHENOMENON].[component],
+					[dbo].[PHENOMENON].[state],
+					[dbo].[PHENOMENON].[medium],
+					[dbo].[PHENOMENON].[representation],
+					[dbo].[PHENOMENON].[parent_phenomenon_id],
+					[dbo].[PHENOMENON].[result_type], 
+					[dbo].[PHENOMENON].[classification_scheme_id]
+				) 
 				VALUES (@code, @name, @description, @quantity, @component, @state, @medium, @representation, @pid, @result_type, @scid);
 		COMMIT TRANSACTION
 	END TRY

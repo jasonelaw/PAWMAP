@@ -1,5 +1,5 @@
 ﻿CREATE PROCEDURE [dbo].[AddUnit]
-	@print VARCHAR(30),
+	@print NVARCHAR(30),
 	@description VARCHAR(255),
 	@ucum VARCHAR(30)
 AS

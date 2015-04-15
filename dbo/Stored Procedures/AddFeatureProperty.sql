@@ -10,14 +10,14 @@ AS
 		BEGIN TRANSACTION
 			DECLARE @fid [int];
 			DECLARE @pid [int];
-			SET @fid =	(SELECT	TOP 1 sampling_feature_id 
-						 FROM	SAMPLING_FEATURE
-						 WHERE	feature_namespace = @feature_namespace
-							AND feature_identifier = @feature_identifier);
-			SET @pid = (SELECT TOP 1 generic_property_id 
-						FROM GENERIC_PROPERTY
-						WHERE property_name = @property);
-			INSERT INTO [FEATURE_PROPERTY] ([sampling_feature_id], [generic_property_id], property_value) VALUES (@fid, @pid, @value);
+			SET @fid =	(SELECT	TOP 1 [dbo].[SAMPLING_FEATURE].[sampling_feature_id] 
+						 FROM	[dbo].[SAMPLING_FEATURE]
+						 WHERE	[dbo].[SAMPLING_FEATURE].[feature_namespace] = @feature_namespace
+							AND [dbo].[SAMPLING_FEATURE].[feature_identifier] = @feature_identifier);
+			SET @pid = (SELECT TOP 1 [dbo].[GENERIC_PROPERTY].[generic_property_id] 
+						FROM [dbo].[GENERIC_PROPERTY]
+						WHERE [dbo].[GENERIC_PROPERTY].[property_name] = @property);
+			INSERT INTO [dbo].[FEATURE_PROPERTY] ([dbo].[FEATURE_PROPERTY].[sampling_feature_id], [dbo].[FEATURE_PROPERTY].[generic_property_id], [dbo].[FEATURE_PROPERTY].[property_value]) VALUES (@fid, @pid, @value);
 		COMMIT TRANSACTION
 	END TRY
 	BEGIN CATCH

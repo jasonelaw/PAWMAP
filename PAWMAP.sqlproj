@@ -252,7 +252,6 @@
     <Build Include="dbo\Stored Procedures\AddCollection.sql" />
     <Build Include="dbo\Stored Procedures\AddRelationship.sql" />
     <Build Include="dbo\Views\V_RESULT.sql" />
-    <Build Include="dbo\IdTable.sql" />
     <Build Include="dbo\Functions\GetObservationsBySamplingFeature.sql" />
     <Build Include="dbo\Functions\GetObservationsByProcedure.sql" />
     <Build Include="dbo\Functions\GetObservationsByObservedProperty.sql" />

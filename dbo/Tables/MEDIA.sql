@@ -1,4 +1,5 @@
 ﻿CREATE TABLE [dbo].[MEDIA]
 (
-	[media] VARCHAR(50) NULL
+	[media] VARCHAR(50) NOT NULL, 
+    CONSTRAINT [PK_MEDIA] PRIMARY KEY ([media])
 )

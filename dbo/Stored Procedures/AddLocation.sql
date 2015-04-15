@@ -16,22 +16,22 @@ AS
 	BEGIN TRY
 		BEGIN TRANSACTION
 			DECLARE @id [int];
-			INSERT INTO [SAMPLING_FEATURE] (feature_namespace, feature_identifier, feature_type, feature_description)
+			INSERT INTO [dbo].[SAMPLING_FEATURE] ([dbo].[SAMPLING_FEATURE].[feature_namespace], [dbo].[SAMPLING_FEATURE].[feature_identifier], [dbo].[SAMPLING_FEATURE].[feature_type], [dbo].[SAMPLING_FEATURE].[feature_description])
 				VALUES (@namespace, @identifier, 'Location', @description);
 			SELECT @id = SCOPE_IDENTITY();
 
 			IF @latitude IS NOT NULL AND @longitude IS NOT NULL
-				INSERT INTO [LOCATION] (sampling_feature_id, location_name, sampled_feature_type, location_type, geographic_feature) 
+				INSERT INTO [dbo].[LOCATION] ([dbo].[LOCATION].[sampling_feature_id], [dbo].[LOCATION].[location_name], [dbo].[LOCATION].[sampled_feature_type], [dbo].[LOCATION].[location_type], [dbo].[LOCATION].[geographic_feature]) 
 					VALUES (@id, @name, @sampled_feature_type, @location_type, geography::Point(@latitude, @longitude, @srid));
 			ELSE IF @wkt IS NOT NULL
-				INSERT INTO [LOCATION] (sampling_feature_id, location_name, sampled_feature_type, location_type, geographic_feature) 
+				INSERT INTO [dbo].[LOCATION] ([dbo].[LOCATION].[sampling_feature_id], [dbo].[LOCATION].[location_name], [dbo].[LOCATION].[sampled_feature_type], [dbo].[LOCATION].[location_type], [dbo].[LOCATION].[geographic_feature]) 
 					VALUES (@id, @name, @sampled_feature_type, @location_type, geography::STGeomFromText(@wkt, @srid));
 			ELSE
-				INSERT INTO [LOCATION] (sampling_feature_id, location_name, sampled_feature_type, location_type) 
+				INSERT INTO [dbo].[LOCATION] ([dbo].[LOCATION].[sampling_feature_id], [dbo].[LOCATION].[location_name], [dbo].[LOCATION].[sampled_feature_type], [dbo].[LOCATION].[location_type]) 
 					VALUES (@id, @name, @sampled_feature_type, @location_type);
 
 			IF @ancestor_feature IS NOT NULL
-				EXEC AddSamplingFeatureRelation @namespace, @ancestor_feature, @namespace, @identifier, 'Parent Location - Sublocation'
+				EXEC [dbo].[AddSamplingFeatureRelation] @namespace, @ancestor_feature, @namespace, @identifier, 'Parent Location - Sublocation'
 		COMMIT TRANSACTION
 	END TRY
 	BEGIN CATCH

@@ -14,8 +14,10 @@
 GO
 
 
-CREATE INDEX [IX_CATEGORICAL_RESULT_phenomenon_id] ON [dbo].[CATEGORICAL_RESULT] ([phenomenon_id])
+CREATE INDEX [IX_CATEGORICAL_RESULT_phenomenon_id] 
+	ON [dbo].[CATEGORICAL_RESULT] ([phenomenon_id])
+	WHERE [phenomenon_id] IS NOT NULL;
 
 GO
 
-CREATE INDEX [IX_CATEGORICAL_RESULT_result_category_id] ON [dbo].[CATEGORICAL_RESULT] ([result_category_id])
+CREATE INDEX [IX_CATEGORICAL_RESULT_result_category_id] ON [dbo].[CATEGORICAL_RESULT] ([result_category_id]);

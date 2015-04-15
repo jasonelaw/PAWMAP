@@ -5,7 +5,7 @@
 )
 RETURNS TABLE AS RETURN
 (
-	WITH DESCENDANTS(to_feature, feature_namespace, feature_identifier, feature_type)
+	WITH DESCENDANTS(descendent_sampling_feature_id, descendent_feature_namespace, descendent_feature_identifier, descendent_feature_type)
 	AS
 	(
 		SELECT	rel.[to_sampling_feature_id], 
@@ -29,12 +29,12 @@ RETURNS TABLE AS RETURN
 				INNER JOIN SAMPLING_FEATURE AS sfr
 					ON rel.to_sampling_feature_id = sfr.sampling_feature_id
 				INNER JOIN DESCENDANTS AS D1
-					ON rel.[from_sampling_feature_id] = D1.to_feature
+					ON rel.[from_sampling_feature_id] = D1.descendent_sampling_feature_id
 	)
 	-- Statement that executes the CTE
-	SELECT	D2.to_feature as sampling_feature_id,
-			D2.feature_namespace,
-			D2.feature_identifier,
-			D2.feature_type
+	SELECT	D2.descendent_sampling_feature_id,
+			D2.descendent_feature_namespace,
+			D2.descendent_feature_identifier,
+			D2.descendent_feature_type
 	FROM DESCENDANTS D2
 );

@@ -12,7 +12,9 @@
     CONSTRAINT [SAMPLE_PK] PRIMARY KEY CLUSTERED ([sample_id] ASC) WITH (FILLFACTOR = 90),
     CONSTRAINT [FK_SAMPLE_PROCESS1] FOREIGN KEY ([handling_process_id]) REFERENCES [dbo].[PROCESS] ([process_id]),
     CONSTRAINT [FK_SAMPLE_PROCESS2] FOREIGN KEY ([collection_process_id]) REFERENCES [dbo].[PROCESS] ([process_id]),
-    CONSTRAINT [FK_SAMPLE_SAMPLING_FEATURE] FOREIGN KEY ([sampling_feature_id]) REFERENCES [dbo].[SAMPLING_FEATURE] ([sampling_feature_id])
+    CONSTRAINT [FK_SAMPLE_SAMPLING_FEATURE] FOREIGN KEY ([sampling_feature_id]) REFERENCES [dbo].[SAMPLING_FEATURE] ([sampling_feature_id]), 
+    CONSTRAINT [FK_SAMPLE_MEDIA] FOREIGN KEY ([media]) REFERENCES [MEDIA]([media]), 
+    CONSTRAINT [FK_SAMPLE_SAMPLE_TYPE] FOREIGN KEY ([sample_type]) REFERENCES [SAMPLE_TYPE]([sample_type])
 );
 
 GO

@@ -202,82 +202,6 @@
 					<Element Type="SqlIndexedColumnSpecification">
 						<Relationship Name="Column">
 							<Entry>
-								<References Name="[dbo].[OBSERVATION_STATUS].[observation_status]" />
-							</Entry>
-						</Relationship>
-					</Element>
-				</Entry>
-			</Relationship>
-			<Relationship Name="DefiningTable">
-				<Entry>
-					<References Name="[dbo].[OBSERVATION_STATUS]" />
-				</Entry>
-			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="11" />
-		</Element>
-		<Element Type="SqlPrimaryKeyConstraint">
-			<Relationship Name="ColumnSpecifications">
-				<Entry>
-					<Element Type="SqlIndexedColumnSpecification">
-						<Relationship Name="Column">
-							<Entry>
-								<References Name="[dbo].[LOCATION_TYPE].[location_type]" />
-							</Entry>
-						</Relationship>
-					</Element>
-				</Entry>
-			</Relationship>
-			<Relationship Name="DefiningTable">
-				<Entry>
-					<References Name="[dbo].[LOCATION_TYPE]" />
-				</Entry>
-			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="12" />
-		</Element>
-		<Element Type="SqlPrimaryKeyConstraint">
-			<Relationship Name="ColumnSpecifications">
-				<Entry>
-					<Element Type="SqlIndexedColumnSpecification">
-						<Relationship Name="Column">
-							<Entry>
-								<References Name="[dbo].[PROCESS_TYPE].[process_type]" />
-							</Entry>
-						</Relationship>
-					</Element>
-				</Entry>
-			</Relationship>
-			<Relationship Name="DefiningTable">
-				<Entry>
-					<References Name="[dbo].[PROCESS_TYPE]" />
-				</Entry>
-			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="13" />
-		</Element>
-		<Element Type="SqlPrimaryKeyConstraint">
-			<Relationship Name="ColumnSpecifications">
-				<Entry>
-					<Element Type="SqlIndexedColumnSpecification">
-						<Relationship Name="Column">
-							<Entry>
-								<References Name="[dbo].[CATEGORICAL_RESULT].[category_result_id]" />
-							</Entry>
-						</Relationship>
-					</Element>
-				</Entry>
-			</Relationship>
-			<Relationship Name="DefiningTable">
-				<Entry>
-					<References Name="[dbo].[CATEGORICAL_RESULT]" />
-				</Entry>
-			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="14" />
-		</Element>
-		<Element Type="SqlPrimaryKeyConstraint">
-			<Relationship Name="ColumnSpecifications">
-				<Entry>
-					<Element Type="SqlIndexedColumnSpecification">
-						<Relationship Name="Column">
-							<Entry>
 								<References Name="[dbo].[COUNT_RESULT].[count_result_id]" />
 							</Entry>
 						</Relationship>
@@ -289,7 +213,7 @@
 					<References Name="[dbo].[COUNT_RESULT]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="15" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="11" />
 		</Element>
 		<Element Type="SqlPrimaryKeyConstraint">
 			<Relationship Name="ColumnSpecifications">
@@ -308,7 +232,26 @@
 					<References Name="[dbo].[TIME_SERIES_RESULT]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="16" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="12" />
+		</Element>
+		<Element Type="SqlPrimaryKeyConstraint">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[CATEGORICAL_RESULT].[category_result_id]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[CATEGORICAL_RESULT]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="13" />
 		</Element>
 		<Element Type="SqlPrimaryKeyConstraint">
 			<Relationship Name="ColumnSpecifications">
@@ -327,6 +270,63 @@
 					<References Name="[dbo].[QUANTITY_RESULT]" />
 				</Entry>
 			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="14" />
+		</Element>
+		<Element Type="SqlPrimaryKeyConstraint">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[OBSERVATION_STATUS].[observation_status]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[OBSERVATION_STATUS]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="15" />
+		</Element>
+		<Element Type="SqlPrimaryKeyConstraint">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[LOCATION_TYPE].[location_type]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[LOCATION_TYPE]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="16" />
+		</Element>
+		<Element Type="SqlPrimaryKeyConstraint">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[PROCESS_TYPE].[process_type]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[PROCESS_TYPE]" />
+				</Entry>
+			</Relationship>
 			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="17" />
 		</Element>
 		<Element Type="SqlProcedure" Name="[dbo].[AddClassificationScheme]">
@@ -334,7 +334,7 @@
 				<Value><![CDATA[
 	SET NOCOUNT ON;
 
-	INSERT INTO CLASSIFICATION_SCHEME (scheme_name) VALUES (@name);]]></Value>
+	INSERT INTO [dbo].[CLASSIFICATION_SCHEME] ([dbo].[CLASSIFICATION_SCHEME].[scheme_name]) VALUES (@name);]]></Value>
 			</Property>
 			<Property Name="IsAnsiNullsOn" Value="True" />
 			<Relationship Name="BodyDependencies">
@@ -372,7 +372,7 @@
 				</Entry>
 			</Relationship>
 			<Annotation Type="SysCommentsObjectAnnotation">
-				<Property Name="Length" Value="158" />
+				<Property Name="Length" Value="198" />
 				<Property Name="StartLine" Value="1" />
 				<Property Name="StartColumn" Value="1" />
 				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[AddClassificationScheme]&#xD;&#xA;&#x9;@name VARCHAR(50)&#xD;&#xA;AS" />
@@ -382,7 +382,7 @@
 			<Property Name="BodyScript">
 				<Value><![CDATA[
 	SET NOCOUNT ON;
-	INSERT INTO COLLECTION (collection_name, collection_description) 
+	INSERT INTO [dbo].[COLLECTION] ([dbo].[COLLECTION].[collection_name], [dbo].[COLLECTION].[collection_description]) 
 		VALUES (@name, @description);]]></Value>
 			</Property>
 			<Property Name="IsAnsiNullsOn" Value="True" />
@@ -443,7 +443,7 @@
 				</Entry>
 			</Relationship>
 			<Annotation Type="SysCommentsObjectAnnotation">
-				<Property Name="Length" Value="210" />
+				<Property Name="Length" Value="260" />
 				<Property Name="StartLine" Value="1" />
 				<Property Name="StartColumn" Value="1" />
 				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[AddCollection]&#xD;&#xA;&#x9;@name VARCHAR(50),&#xD;&#xA;&#x9;@description VARCHAR(255)&#xD;&#xA;AS" />
@@ -458,14 +458,14 @@
 		BEGIN TRANSACTION
 			DECLARE @fid [int];
 			DECLARE @pid [int];
-			SET @fid =	(SELECT	TOP 1 sampling_feature_id 
-						 FROM	SAMPLING_FEATURE
-						 WHERE	feature_namespace = @feature_namespace
-							AND feature_identifier = @feature_identifier);
-			SET @pid = (SELECT TOP 1 generic_property_id 
-						FROM GENERIC_PROPERTY
-						WHERE property_name = @property);
-			INSERT INTO [FEATURE_PROPERTY] ([sampling_feature_id], [generic_property_id], property_value) VALUES (@fid, @pid, @value);
+			SET @fid =	(SELECT	TOP 1 [dbo].[SAMPLING_FEATURE].[sampling_feature_id] 
+						 FROM	[dbo].[SAMPLING_FEATURE]
+						 WHERE	[dbo].[SAMPLING_FEATURE].[feature_namespace] = @feature_namespace
+							AND [dbo].[SAMPLING_FEATURE].[feature_identifier] = @feature_identifier);
+			SET @pid = (SELECT TOP 1 [dbo].[GENERIC_PROPERTY].[generic_property_id] 
+						FROM [dbo].[GENERIC_PROPERTY]
+						WHERE [dbo].[GENERIC_PROPERTY].[property_name] = @property);
+			INSERT INTO [dbo].[FEATURE_PROPERTY] ([dbo].[FEATURE_PROPERTY].[sampling_feature_id], [dbo].[FEATURE_PROPERTY].[generic_property_id], [dbo].[FEATURE_PROPERTY].[property_value]) VALUES (@fid, @pid, @value);
 		COMMIT TRANSACTION
 	END TRY
 	BEGIN CATCH
@@ -635,7 +635,7 @@
 				</Entry>
 			</Relationship>
 			<Annotation Type="SysCommentsObjectAnnotation">
-				<Property Name="Length" Value="1341" />
+				<Property Name="Length" Value="1575" />
 				<Property Name="StartLine" Value="1" />
 				<Property Name="StartColumn" Value="1" />
 				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[AddFeatureProperty]&#xD;&#xA;&#x9;@feature_namespace VARCHAR(50),&#xD;&#xA;&#x9;@feature_identifier VARCHAR(50),&#xD;&#xA;&#x9;@property VARCHAR(50),&#xD;&#xA;&#x9;@value VARCHAR(200)&#xD;&#xA;AS" />
@@ -649,22 +649,22 @@
 	BEGIN TRY
 		BEGIN TRANSACTION
 			DECLARE @id [int];
-			INSERT INTO [SAMPLING_FEATURE] (feature_namespace, feature_identifier, feature_type, feature_description) 
+			INSERT INTO [dbo].[SAMPLING_FEATURE] ([dbo].[SAMPLING_FEATURE].[feature_namespace], [dbo].[SAMPLING_FEATURE].[feature_identifier], [dbo].[SAMPLING_FEATURE].[feature_type], [dbo].[SAMPLING_FEATURE].[feature_description])
 				VALUES (@namespace, @identifier, 'Location', @description);
 			SELECT @id = SCOPE_IDENTITY();
 
 			IF @latitude IS NOT NULL AND @longitude IS NOT NULL
-				INSERT INTO [LOCATION] (sampling_feature_id, location_name, sampled_feature_type, location_type, geographic_feature) 
+				INSERT INTO [dbo].[LOCATION] ([dbo].[LOCATION].[sampling_feature_id], [dbo].[LOCATION].[location_name], [dbo].[LOCATION].[sampled_feature_type], [dbo].[LOCATION].[location_type], [dbo].[LOCATION].[geographic_feature]) 
 					VALUES (@id, @name, @sampled_feature_type, @location_type, geography::Point(@latitude, @longitude, @srid));
 			ELSE IF @wkt IS NOT NULL
-				INSERT INTO [LOCATION] (sampling_feature_id, location_name, sampled_feature_type, location_type, geographic_feature) 
+				INSERT INTO [dbo].[LOCATION] ([dbo].[LOCATION].[sampling_feature_id], [dbo].[LOCATION].[location_name], [dbo].[LOCATION].[sampled_feature_type], [dbo].[LOCATION].[location_type], [dbo].[LOCATION].[geographic_feature]) 
 					VALUES (@id, @name, @sampled_feature_type, @location_type, geography::STGeomFromText(@wkt, @srid));
 			ELSE
-				INSERT INTO [LOCATION] (sampling_feature_id, location_name, sampled_feature_type, location_type) 
+				INSERT INTO [dbo].[LOCATION] ([dbo].[LOCATION].[sampling_feature_id], [dbo].[LOCATION].[location_name], [dbo].[LOCATION].[sampled_feature_type], [dbo].[LOCATION].[location_type]) 
 					VALUES (@id, @name, @sampled_feature_type, @location_type);
 
 			IF @ancestor_feature IS NOT NULL
-				EXEC AddSamplingFeatureRelation @namespace, @ancestor_feature, @namespace, @identifier, 'Parent Location - Sublocation'
+				EXEC [dbo].[AddSamplingFeatureRelation] @namespace, @ancestor_feature, @namespace, @identifier, 'Parent Location - Sublocation'
 		COMMIT TRANSACTION
 	END TRY
 	BEGIN CATCH
@@ -984,7 +984,7 @@
 				</Entry>
 			</Relationship>
 			<Annotation Type="SysCommentsObjectAnnotation">
-				<Property Name="Length" Value="2170" />
+				<Property Name="Length" Value="2575" />
 				<Property Name="StartLine" Value="1" />
 				<Property Name="StartColumn" Value="1" />
 				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[AddLocation]&#xD;&#xA;&#x9;@namespace  varchar(50),&#xD;&#xA;&#x9;@identifier varchar(50),&#xD;&#xA;&#x9;@description varchar(MAX),&#xD;&#xA;&#x9;@name varchar(255),&#xD;&#xA;&#x9;@sampled_feature_type varchar(50),&#xD;&#xA;&#x9;@location_type varchar(50),&#xD;&#xA;&#x9;@latitude float = NULL,&#xD;&#xA;&#x9;@longitude float = NULL,&#xD;&#xA;&#x9;@srid int,&#xD;&#xA;&#x9;@wkt varchar(1000) = NULL,&#xD;&#xA;&#x9;@ancestor_feature varchar(50) = NULL&#xD;&#xA;AS" />
@@ -1002,21 +1002,34 @@
 				@scid [INT];
 			IF @parent_phenomenon IS NOT NULL
 				BEGIN
-					SET @pid =	(SELECT TOP 1 phenomenon_id
-								 FROM PHENOMENON
-								 WHERE phenomenon_code = @parent_phenomenon);
+					SET @pid =	(SELECT TOP 1 [dbo].[PHENOMENON].[phenomenon_id]
+								 FROM [dbo].[PHENOMENON]
+								 WHERE [dbo].[PHENOMENON].[phenomenon_code] = @parent_phenomenon);
 					IF @pid IS NULL
 						RAISERROR('A matching phenomenon for parent phenomenon code (%s) was not found.', 11, 1, @parent_phenomenon)
 				END
 			IF @classification_scheme IS NOT NULL
 				BEGIN
-					SET @scid =	(SELECT TOP 1 classification_scheme_id 
-								 FROM CLASSIFICATION_SCHEME
-								 WHERE scheme_name = @classification_scheme);
+					SET @scid =	(SELECT TOP 1 [dbo].[CLASSIFICATION_SCHEME].[classification_scheme_id] 
+								 FROM [dbo].[CLASSIFICATION_SCHEME]
+								 WHERE [dbo].[CLASSIFICATION_SCHEME].[scheme_name] = @classification_scheme);
 					IF @scid IS NULL
 						RAISERROR('A matching classification scheme for (%s) was not found.', 11, 1, @classification_scheme)
 				END
-			INSERT INTO PHENOMENON ([phenomenon_code],[phenomenon_name],[phenomenon_description],[quantity],[component],[state],[medium],[representation],[parent_phenomenon_id],[result_type], [classification_scheme_id]) 
+			INSERT INTO [dbo].[PHENOMENON] 
+				(
+					[dbo].[PHENOMENON].[phenomenon_code],
+					[dbo].[PHENOMENON].[phenomenon_name],
+					[dbo].[PHENOMENON].[phenomenon_description],
+					[dbo].[PHENOMENON].[quantity],
+					[dbo].[PHENOMENON].[component],
+					[dbo].[PHENOMENON].[state],
+					[dbo].[PHENOMENON].[medium],
+					[dbo].[PHENOMENON].[representation],
+					[dbo].[PHENOMENON].[parent_phenomenon_id],
+					[dbo].[PHENOMENON].[result_type], 
+					[dbo].[PHENOMENON].[classification_scheme_id]
+				) 
 				VALUES (@code, @name, @description, @quantity, @component, @state, @medium, @representation, @pid, @result_type, @scid);
 		COMMIT TRANSACTION
 	END TRY
@@ -1092,9 +1105,6 @@
 				</Entry>
 				<Entry>
 					<References Name="[dbo].[CLASSIFICATION_SCHEME].[scheme_name]" />
-				</Entry>
-				<Entry>
-					<References Name="[dbo].[PHENOMENON]" />
 				</Entry>
 				<Entry>
 					<References Name="[dbo].[PHENOMENON].[phenomenon_code]" />
@@ -1362,7 +1372,7 @@
 				</Entry>
 			</Relationship>
 			<Annotation Type="SysCommentsObjectAnnotation">
-				<Property Name="Length" Value="2144" />
+				<Property Name="Length" Value="2572" />
 				<Property Name="StartLine" Value="1" />
 				<Property Name="StartColumn" Value="1" />
 				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[AddPhenomenon]&#xD;&#xA;&#x9;@code VARCHAR(50),&#xD;&#xA;&#x9;@name VARCHAR(100),&#xD;&#xA;&#x9;@description VARCHAR(1000),&#xD;&#xA;&#x9;@quantity VARCHAR(100) = NULL,&#xD;&#xA;&#x9;@component VARCHAR(200) = NULL,&#xD;&#xA;&#x9;@state VARCHAR(1000) = NULL,&#xD;&#xA;&#x9;@medium VARCHAR(1000) = NULL,&#xD;&#xA;&#x9;@representation VARCHAR(1000) = NULL,&#xD;&#xA;&#x9;@parent_phenomenon VARCHAR(50) = NULL,&#xD;&#xA;&#x9;@result_type VARCHAR(30),&#xD;&#xA;&#x9;@classification_scheme VARCHAR(50) = NULL&#xD;&#xA;AS" />
@@ -1372,8 +1382,30 @@
 			<Property Name="BodyScript">
 				<Value QuotedIdentifiers="True" AnsiNulls="True"><![CDATA[
 	SET NOCOUNT ON;
-	INSERT INTO PROCESS (process_name, process_description, method_name, method_publisher, method_code, method_version, instrument, nemi_method_id, process_type) 
-		VALUES (@name, @description, @method_name, @method_publisher, @method_code, @method_version, @instrument, @nemi_method_id, @process_type);]]></Value>
+	INSERT INTO [dbo].[PROCESS]
+		(
+			[dbo].[PROCESS].[process_name], 
+			[dbo].[PROCESS].[process_description], 
+			[dbo].[PROCESS].[method_name], 
+			[dbo].[PROCESS].[method_publisher], 
+			[dbo].[PROCESS].[method_code], 
+			[dbo].[PROCESS].[method_version], 
+			[dbo].[PROCESS].[instrument], 
+			[dbo].[PROCESS].[nemi_method_id], 
+			[dbo].[PROCESS].[process_type]
+		) 
+		VALUES 
+			(
+				@name, 
+				@description, 
+				@method_name,
+				@method_publisher,
+				@method_code,
+				@method_version, 
+				@instrument, 
+				@nemi_method_id, 
+				@process_type
+			);]]></Value>
 			</Property>
 			<Property Name="IsAnsiNullsOn" Value="True" />
 			<Relationship Name="BodyDependencies">
@@ -1596,7 +1628,7 @@
 				</Entry>
 			</Relationship>
 			<Annotation Type="SysCommentsObjectAnnotation">
-				<Property Name="Length" Value="641" />
+				<Property Name="Length" Value="924" />
 				<Property Name="StartLine" Value="1" />
 				<Property Name="StartColumn" Value="1" />
 				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[AddProcess]&#xD;&#xA;&#x9;@name VARCHAR(200),&#xD;&#xA;&#x9;@description VARCHAR(MAX) = NULL,&#xD;&#xA;&#x9;@method_name VARCHAR(200),&#xD;&#xA;&#x9;@method_publisher VARCHAR(50),&#xD;&#xA;&#x9;@method_code VARCHAR(50),&#xD;&#xA;&#x9;@method_version VARCHAR(30),&#xD;&#xA;&#x9;@instrument VARCHAR(100) = NULL,&#xD;&#xA;&#x9;@nemi_method_id VARCHAR(100) = NULL,&#xD;&#xA;&#x9;@process_type VARCHAR(30)&#xD;&#xA;AS" />
@@ -2963,7 +2995,7 @@
 									<Property Name="Length" Value="30" />
 									<Relationship Name="Type">
 										<Entry>
-											<References ExternalSource="BuiltIns" Name="[varchar]" />
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
 										</Entry>
 									</Relationship>
 								</Element>
@@ -3010,10 +3042,10 @@
 				</Entry>
 			</Relationship>
 			<Annotation Type="SysCommentsObjectAnnotation">
-				<Property Name="Length" Value="226" />
+				<Property Name="Length" Value="227" />
 				<Property Name="StartLine" Value="1" />
 				<Property Name="StartColumn" Value="1" />
-				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[AddUnit]&#xD;&#xA;&#x9;@print VARCHAR(30),&#xD;&#xA;&#x9;@description VARCHAR(255),&#xD;&#xA;&#x9;@ucum VARCHAR(30)&#xD;&#xA;AS" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[AddUnit]&#xD;&#xA;&#x9;@print NVARCHAR(30),&#xD;&#xA;&#x9;@description VARCHAR(255),&#xD;&#xA;&#x9;@ucum VARCHAR(30)&#xD;&#xA;AS" />
 			</Annotation>
 		</Element>
 		<Element Type="SqlUniqueConstraint" Name="[dbo].[AK_CATEGORICAL_RESULT_observation_id_phenomenon_id]">
@@ -3442,7 +3474,7 @@
 								</Element>
 							</Entry>
 						</Relationship>
-						<AttachedAnnotation Disambiguator="14" />
+						<AttachedAnnotation Disambiguator="13" />
 					</Element>
 				</Entry>
 				<Entry>
@@ -3520,6 +3552,14 @@
 			<AttachedAnnotation Disambiguator="18" />
 		</Element>
 		<Element Type="SqlIndex" Name="[dbo].[CATEGORICAL_RESULT].[IX_CATEGORICAL_RESULT_phenomenon_id]">
+			<Property Name="FilterPredicate">
+				<Value><![CDATA[[phenomenon_id] IS NOT NULL]]></Value>
+			</Property>
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[CATEGORICAL_RESULT].[phenomenon_id]" />
+				</Entry>
+			</Relationship>
 			<Relationship Name="ColumnSpecifications">
 				<Entry>
 					<Element Type="SqlIndexedColumnSpecification">
@@ -3716,7 +3756,7 @@
 								</Element>
 							</Entry>
 						</Relationship>
-						<AttachedAnnotation Disambiguator="15" />
+						<AttachedAnnotation Disambiguator="11" />
 					</Element>
 				</Entry>
 				<Entry>
@@ -3793,6 +3833,14 @@
 			<AttachedAnnotation Disambiguator="21" />
 		</Element>
 		<Element Type="SqlIndex" Name="[dbo].[COUNT_RESULT].[IX_COUNT_RESULT_phenomenon_id]">
+			<Property Name="FilterPredicate">
+				<Value><![CDATA[[phenomenon_id] IS NOT NULL]]></Value>
+			</Property>
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[COUNT_RESULT].[phenomenon_id]" />
+				</Entry>
+			</Relationship>
 			<Relationship Name="ColumnSpecifications">
 				<Entry>
 					<Element Type="SqlIndexedColumnSpecification">
@@ -4035,6 +4083,52 @@
 			</Relationship>
 			<AttachedAnnotation Disambiguator="43" />
 		</Element>
+		<Element Type="SqlForeignKeyConstraint" Name="[dbo].[FK_LOCATION_LOCATION_TYPE]">
+			<Relationship Name="Columns">
+				<Entry>
+					<References Name="[dbo].[LOCATION].[location_type]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[LOCATION]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignColumns">
+				<Entry>
+					<References Name="[dbo].[LOCATION_TYPE].[location_type]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignTable">
+				<Entry>
+					<References Name="[dbo].[LOCATION_TYPE]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="44" />
+		</Element>
+		<Element Type="SqlForeignKeyConstraint" Name="[dbo].[FK_LOCATION_SAMPLED_FEATURE_TYPE]">
+			<Relationship Name="Columns">
+				<Entry>
+					<References Name="[dbo].[LOCATION].[sampled_feature_type]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[LOCATION]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignColumns">
+				<Entry>
+					<References Name="[dbo].[SAMPLED_FEATURE_TYPE].[sampled_feature_type]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignTable">
+				<Entry>
+					<References Name="[dbo].[SAMPLED_FEATURE_TYPE]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="45" />
+		</Element>
 		<Element Type="SqlForeignKeyConstraint" Name="[dbo].[FK_LOCATION_SAMPLING_FEATURE]">
 			<Property Name="OnDeleteAction" Value="1" />
 			<Relationship Name="Columns">
@@ -4057,7 +4151,7 @@
 					<References Name="[dbo].[SAMPLING_FEATURE]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="44" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="46" />
 		</Element>
 		<Element Type="SqlForeignKeyConstraint" Name="[dbo].[FK_OBSERVATION_COLLECTION_COLLECTION]">
 			<Relationship Name="Columns">
@@ -4080,7 +4174,7 @@
 					<References Name="[dbo].[COLLECTION]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="45" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="47" />
 		</Element>
 		<Element Type="SqlForeignKeyConstraint" Name="[dbo].[FK_OBSERVATION_COLLECTION_OBSERVATION]">
 			<Relationship Name="Columns">
@@ -4103,7 +4197,7 @@
 					<References Name="[dbo].[OBSERVATION]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="46" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="48" />
 		</Element>
 		<Element Type="SqlForeignKeyConstraint" Name="[dbo].[FK_OBSERVATION_OBSERVATION_STATUS]">
 			<Relationship Name="Columns">
@@ -4126,7 +4220,7 @@
 					<References Name="[dbo].[OBSERVATION_STATUS]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="47" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="49" />
 		</Element>
 		<Element Type="SqlForeignKeyConstraint" Name="[dbo].[FK_OBSERVATION_PHENOMENON]">
 			<Relationship Name="Columns">
@@ -4149,7 +4243,7 @@
 					<References Name="[dbo].[PHENOMENON]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="48" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="50" />
 		</Element>
 		<Element Type="SqlForeignKeyConstraint" Name="[dbo].[FK_OBSERVATION_PROCESS]">
 			<Relationship Name="Columns">
@@ -4172,7 +4266,7 @@
 					<References Name="[dbo].[PROCESS]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="49" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="51" />
 		</Element>
 		<Element Type="SqlForeignKeyConstraint" Name="[dbo].[FK_OBSERVATION_QUALITY_CONTROL_LEVEL]">
 			<Relationship Name="Columns">
@@ -4195,7 +4289,7 @@
 					<References Name="[dbo].[QUALITY_CONTROL_LEVEL]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="50" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="52" />
 		</Element>
 		<Element Type="SqlForeignKeyConstraint" Name="[dbo].[FK_OBSERVATION_SAMPLING_FEATURE]">
 			<Relationship Name="Columns">
@@ -4218,7 +4312,7 @@
 					<References Name="[dbo].[SAMPLING_FEATURE]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="51" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="53" />
 		</Element>
 		<Element Type="SqlForeignKeyConstraint" Name="[dbo].[FK_PHENOMENON_CLASSIFICATION_SCHEME]">
 			<Relationship Name="Columns">
@@ -4241,7 +4335,7 @@
 					<References Name="[dbo].[CLASSIFICATION_SCHEME]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="52" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="54" />
 		</Element>
 		<Element Type="SqlForeignKeyConstraint" Name="[dbo].[FK_PHENOMENON_PHENOMENON]">
 			<Relationship Name="Columns">
@@ -4264,7 +4358,7 @@
 					<References Name="[dbo].[PHENOMENON]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="53" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="55" />
 		</Element>
 		<Element Type="SqlForeignKeyConstraint" Name="[dbo].[FK_PHENOMENON_RESULT_TYPE]">
 			<Relationship Name="Columns">
@@ -4287,7 +4381,7 @@
 					<References Name="[dbo].[RESULT_TYPE]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="54" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="56" />
 		</Element>
 		<Element Type="SqlForeignKeyConstraint" Name="[dbo].[FK_PROCESS_PROCESS_TYPE]">
 			<Relationship Name="Columns">
@@ -4310,7 +4404,7 @@
 					<References Name="[dbo].[PROCESS_TYPE]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="55" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="57" />
 		</Element>
 		<Element Type="SqlForeignKeyConstraint" Name="[dbo].[FK_QUANTITY_RESULT_OBSERVATION]">
 			<Property Name="OnDeleteAction" Value="1" />
@@ -4334,7 +4428,7 @@
 					<References Name="[dbo].[OBSERVATION]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="56" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="58" />
 		</Element>
 		<Element Type="SqlForeignKeyConstraint" Name="[dbo].[FK_QUANTITY_RESULT_PHENOMENON]">
 			<Relationship Name="Columns">
@@ -4357,7 +4451,7 @@
 					<References Name="[dbo].[PHENOMENON]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="57" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="59" />
 		</Element>
 		<Element Type="SqlForeignKeyConstraint" Name="[dbo].[FK_QUANTITY_RESULT_UNIT]">
 			<Relationship Name="Columns">
@@ -4380,7 +4474,7 @@
 					<References Name="[dbo].[UNIT]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="58" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="60" />
 		</Element>
 		<Element Type="SqlForeignKeyConstraint" Name="[dbo].[FK_RESULT_CATEGORY_CLASSIFICATION_SCHEME]">
 			<Relationship Name="Columns">
@@ -4403,7 +4497,7 @@
 					<References Name="[dbo].[CLASSIFICATION_SCHEME]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="59" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="61" />
 		</Element>
 		<Element Type="SqlForeignKeyConstraint" Name="[dbo].[FK_RESULT_CATEGORY_TAXON]">
 			<Relationship Name="Columns">
@@ -4426,7 +4520,30 @@
 					<References Name="[dbo].[TAXON]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="60" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="62" />
+		</Element>
+		<Element Type="SqlForeignKeyConstraint" Name="[dbo].[FK_SAMPLE_MEDIA]">
+			<Relationship Name="Columns">
+				<Entry>
+					<References Name="[dbo].[SAMPLE].[media]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[SAMPLE]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignColumns">
+				<Entry>
+					<References Name="[dbo].[MEDIA].[media]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignTable">
+				<Entry>
+					<References Name="[dbo].[MEDIA]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="63" />
 		</Element>
 		<Element Type="SqlForeignKeyConstraint" Name="[dbo].[FK_SAMPLE_PROCESS1]">
 			<Relationship Name="Columns">
@@ -4449,7 +4566,7 @@
 					<References Name="[dbo].[PROCESS]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="61" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="64" />
 		</Element>
 		<Element Type="SqlForeignKeyConstraint" Name="[dbo].[FK_SAMPLE_PROCESS2]">
 			<Relationship Name="Columns">
@@ -4472,7 +4589,30 @@
 					<References Name="[dbo].[PROCESS]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="62" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="65" />
+		</Element>
+		<Element Type="SqlForeignKeyConstraint" Name="[dbo].[FK_SAMPLE_SAMPLE_TYPE]">
+			<Relationship Name="Columns">
+				<Entry>
+					<References Name="[dbo].[SAMPLE].[sample_type]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[SAMPLE]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignColumns">
+				<Entry>
+					<References Name="[dbo].[SAMPLE_TYPE].[sample_type]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignTable">
+				<Entry>
+					<References Name="[dbo].[SAMPLE_TYPE]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="66" />
 		</Element>
 		<Element Type="SqlForeignKeyConstraint" Name="[dbo].[FK_SAMPLE_SAMPLING_FEATURE]">
 			<Relationship Name="Columns">
@@ -4495,7 +4635,7 @@
 					<References Name="[dbo].[SAMPLING_FEATURE]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="63" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="67" />
 		</Element>
 		<Element Type="SqlForeignKeyConstraint" Name="[dbo].[FK_SAMPLING_FEATURE_RELATION_SAMPLINGFEATURE1]">
 			<Relationship Name="Columns">
@@ -4518,7 +4658,7 @@
 					<References Name="[dbo].[SAMPLING_FEATURE]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="64" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="68" />
 		</Element>
 		<Element Type="SqlForeignKeyConstraint" Name="[dbo].[FK_SAMPLING_FEATURE_RELATION_SAMPLINGFEATURE2]">
 			<Property Name="OnDeleteAction" Value="1" />
@@ -4542,7 +4682,7 @@
 					<References Name="[dbo].[SAMPLING_FEATURE]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="65" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="69" />
 		</Element>
 		<Element Type="SqlForeignKeyConstraint" Name="[dbo].[FK_TIME_SERIES_RESULT_OBSERVATION]">
 			<Property Name="OnDeleteAction" Value="1" />
@@ -4566,7 +4706,7 @@
 					<References Name="[dbo].[OBSERVATION]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="66" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="70" />
 		</Element>
 		<Element Type="SqlForeignKeyConstraint" Name="[dbo].[FK_TIME_SERIES_RESULT_UNIT]">
 			<Relationship Name="Columns">
@@ -4589,7 +4729,7 @@
 					<References Name="[dbo].[UNIT]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="67" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="71" />
 		</Element>
 		<Element Type="SqlTable" Name="[dbo].[GENERIC_PROPERTY]">
 			<Property Name="IsAnsiNullsOn" Value="True" />
@@ -4651,7 +4791,7 @@
 					<References ExternalSource="BuiltIns" Name="[dbo]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="68" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="72" />
 			<AttachedAnnotation Disambiguator="22" />
 		</Element>
 		<Element Type="SqlInlineTableValuedFunction" Name="[dbo].[GetAncestorSamplingFeatures]">
@@ -4703,54 +4843,54 @@
 					<References Name="[dbo].[SAMPLING_FEATURE_RELATION].[to_sampling_feature_id]" />
 				</Entry>
 				<Entry>
-					<References Name="[dbo].[GetAncestorSamplingFeatures].[CTE1].[ANCESTORS].[from_feature]" />
+					<References Name="[dbo].[GetAncestorSamplingFeatures].[CTE1].[ANCESTORS].[ancestor_sampling_feature_id]" />
 				</Entry>
 				<Entry>
-					<References Name="[dbo].[GetAncestorSamplingFeatures].[CTE1].[ANCESTORS].[from_feature]" />
+					<References Name="[dbo].[GetAncestorSamplingFeatures].[CTE1].[ANCESTORS].[ancestor_sampling_feature_id]" />
 				</Entry>
 				<Entry>
-					<References Name="[dbo].[GetAncestorSamplingFeatures].[CTE1].[ANCESTORS].[feature_namespace]" />
+					<References Name="[dbo].[GetAncestorSamplingFeatures].[CTE1].[ANCESTORS].[ancestor_feature_namespace]" />
 				</Entry>
 				<Entry>
-					<References Name="[dbo].[GetAncestorSamplingFeatures].[CTE1].[ANCESTORS].[feature_identifier]" />
+					<References Name="[dbo].[GetAncestorSamplingFeatures].[CTE1].[ANCESTORS].[ancestor_feature_identifier]" />
 				</Entry>
 				<Entry>
-					<References Name="[dbo].[GetAncestorSamplingFeatures].[CTE1].[ANCESTORS].[feature_type]" />
+					<References Name="[dbo].[GetAncestorSamplingFeatures].[CTE1].[ANCESTORS].[ancestor_feature_type]" />
 				</Entry>
 			</Relationship>
 			<Relationship Name="Columns">
 				<Entry>
-					<Element Type="SqlComputedColumn" Name="[dbo].[GetAncestorSamplingFeatures].[sampling_feature_id]">
+					<Element Type="SqlComputedColumn" Name="[dbo].[GetAncestorSamplingFeatures].[ancestor_sampling_feature_id]">
 						<Relationship Name="ExpressionDependencies">
 							<Entry>
-								<References Name="[dbo].[GetAncestorSamplingFeatures].[CTE1].[ANCESTORS].[from_feature]" />
+								<References Name="[dbo].[GetAncestorSamplingFeatures].[CTE1].[ANCESTORS].[ancestor_sampling_feature_id]" />
 							</Entry>
 						</Relationship>
 					</Element>
 				</Entry>
 				<Entry>
-					<Element Type="SqlComputedColumn" Name="[dbo].[GetAncestorSamplingFeatures].[feature_namespace]">
+					<Element Type="SqlComputedColumn" Name="[dbo].[GetAncestorSamplingFeatures].[ancestor_feature_namespace]">
 						<Relationship Name="ExpressionDependencies">
 							<Entry>
-								<References Name="[dbo].[GetAncestorSamplingFeatures].[CTE1].[ANCESTORS].[feature_namespace]" />
+								<References Name="[dbo].[GetAncestorSamplingFeatures].[CTE1].[ANCESTORS].[ancestor_feature_namespace]" />
 							</Entry>
 						</Relationship>
 					</Element>
 				</Entry>
 				<Entry>
-					<Element Type="SqlComputedColumn" Name="[dbo].[GetAncestorSamplingFeatures].[feature_identifier]">
+					<Element Type="SqlComputedColumn" Name="[dbo].[GetAncestorSamplingFeatures].[ancestor_feature_identifier]">
 						<Relationship Name="ExpressionDependencies">
 							<Entry>
-								<References Name="[dbo].[GetAncestorSamplingFeatures].[CTE1].[ANCESTORS].[feature_identifier]" />
+								<References Name="[dbo].[GetAncestorSamplingFeatures].[CTE1].[ANCESTORS].[ancestor_feature_identifier]" />
 							</Entry>
 						</Relationship>
 					</Element>
 				</Entry>
 				<Entry>
-					<Element Type="SqlComputedColumn" Name="[dbo].[GetAncestorSamplingFeatures].[feature_type]">
+					<Element Type="SqlComputedColumn" Name="[dbo].[GetAncestorSamplingFeatures].[ancestor_feature_type]">
 						<Relationship Name="ExpressionDependencies">
 							<Entry>
-								<References Name="[dbo].[GetAncestorSamplingFeatures].[CTE1].[ANCESTORS].[feature_type]" />
+								<References Name="[dbo].[GetAncestorSamplingFeatures].[CTE1].[ANCESTORS].[ancestor_feature_type]" />
 							</Entry>
 						</Relationship>
 					</Element>
@@ -4761,7 +4901,7 @@
 					<Element Type="SqlDynamicColumnSource" Name="[dbo].[GetAncestorSamplingFeatures].[CTE1].[ANCESTORS]">
 						<Relationship Name="Columns">
 							<Entry>
-								<Element Type="SqlComputedColumn" Name="[dbo].[GetAncestorSamplingFeatures].[CTE1].[ANCESTORS].[from_feature]">
+								<Element Type="SqlComputedColumn" Name="[dbo].[GetAncestorSamplingFeatures].[CTE1].[ANCESTORS].[ancestor_sampling_feature_id]">
 									<Relationship Name="ExpressionDependencies">
 										<Entry>
 											<References Name="[dbo].[SAMPLING_FEATURE_RELATION].[from_sampling_feature_id]" />
@@ -4770,7 +4910,7 @@
 								</Element>
 							</Entry>
 							<Entry>
-								<Element Type="SqlComputedColumn" Name="[dbo].[GetAncestorSamplingFeatures].[CTE1].[ANCESTORS].[feature_namespace]">
+								<Element Type="SqlComputedColumn" Name="[dbo].[GetAncestorSamplingFeatures].[CTE1].[ANCESTORS].[ancestor_feature_namespace]">
 									<Relationship Name="ExpressionDependencies">
 										<Entry>
 											<References Name="[dbo].[SAMPLING_FEATURE].[feature_namespace]" />
@@ -4779,7 +4919,7 @@
 								</Element>
 							</Entry>
 							<Entry>
-								<Element Type="SqlComputedColumn" Name="[dbo].[GetAncestorSamplingFeatures].[CTE1].[ANCESTORS].[feature_identifier]">
+								<Element Type="SqlComputedColumn" Name="[dbo].[GetAncestorSamplingFeatures].[CTE1].[ANCESTORS].[ancestor_feature_identifier]">
 									<Relationship Name="ExpressionDependencies">
 										<Entry>
 											<References Name="[dbo].[SAMPLING_FEATURE].[feature_identifier]" />
@@ -4788,7 +4928,7 @@
 								</Element>
 							</Entry>
 							<Entry>
-								<Element Type="SqlComputedColumn" Name="[dbo].[GetAncestorSamplingFeatures].[CTE1].[ANCESTORS].[feature_type]">
+								<Element Type="SqlComputedColumn" Name="[dbo].[GetAncestorSamplingFeatures].[CTE1].[ANCESTORS].[ancestor_feature_type]">
 									<Relationship Name="ExpressionDependencies">
 										<Entry>
 											<References Name="[dbo].[SAMPLING_FEATURE].[feature_type]" />
@@ -4806,7 +4946,7 @@
 						<Property Name="BodyScript">
 							<Value><![CDATA[
 (
-	WITH ANCESTORS(from_feature, feature_namespace, feature_identifier, feature_type)
+	WITH ANCESTORS(ancestor_sampling_feature_id, ancestor_feature_namespace, ancestor_feature_identifier, ancestor_feature_type)
 	AS
 	(
 		SELECT REL.[from_sampling_feature_id], sfl.feature_namespace, sfl.feature_identifier, sfl.feature_type
@@ -4824,18 +4964,18 @@
 			INNER JOIN SAMPLING_FEATURE AS sfl
 				ON rel.from_sampling_feature_id = sfl.sampling_feature_id	
 			INNER JOIN ANCESTORS AS A1
-				ON REL.[to_sampling_feature_id] = A1.from_feature
+				ON REL.[to_sampling_feature_id] = A1.ancestor_sampling_feature_id
 	)
 	-- Statement that executes the CTE
-	SELECT	D2.from_feature as sampling_feature_id,
-			D2.feature_namespace,
-			D2.feature_identifier,
-			D2.feature_type
+	SELECT	D2.ancestor_sampling_feature_id,
+			D2.ancestor_feature_namespace,
+			D2.ancestor_feature_identifier,
+			D2.ancestor_feature_type
 	FROM ANCESTORS AS D2
 )]]></Value>
 						</Property>
 						<Annotation Type="SysCommentsObjectAnnotation">
-							<Property Name="Length" Value="1211" />
+							<Property Name="Length" Value="1290" />
 							<Property Name="StartLine" Value="1" />
 							<Property Name="StartColumn" Value="1" />
 							<Property Name="HeaderContents" Value="CREATE FUNCTION [dbo].[GetAncestorSamplingFeatures]&#xD;&#xA;(&#xD;&#xA;&#x9;@namespace VARCHAR(50),&#xD;&#xA;&#x9;@identifier VARCHAR(50)&#xD;&#xA;)&#xD;&#xA;RETURNS TABLE AS RETURN" />
@@ -5233,54 +5373,54 @@
 					<References Name="[dbo].[GetDescendentSamplingFeatures].[@identifier]" />
 				</Entry>
 				<Entry>
-					<References Name="[dbo].[GetDescendentSamplingFeatures].[CTE1].[DESCENDANTS].[to_feature]" />
+					<References Name="[dbo].[GetDescendentSamplingFeatures].[CTE1].[DESCENDANTS].[descendent_sampling_feature_id]" />
 				</Entry>
 				<Entry>
-					<References Name="[dbo].[GetDescendentSamplingFeatures].[CTE1].[DESCENDANTS].[to_feature]" />
+					<References Name="[dbo].[GetDescendentSamplingFeatures].[CTE1].[DESCENDANTS].[descendent_sampling_feature_id]" />
 				</Entry>
 				<Entry>
-					<References Name="[dbo].[GetDescendentSamplingFeatures].[CTE1].[DESCENDANTS].[feature_namespace]" />
+					<References Name="[dbo].[GetDescendentSamplingFeatures].[CTE1].[DESCENDANTS].[descendent_feature_namespace]" />
 				</Entry>
 				<Entry>
-					<References Name="[dbo].[GetDescendentSamplingFeatures].[CTE1].[DESCENDANTS].[feature_identifier]" />
+					<References Name="[dbo].[GetDescendentSamplingFeatures].[CTE1].[DESCENDANTS].[descendent_feature_identifier]" />
 				</Entry>
 				<Entry>
-					<References Name="[dbo].[GetDescendentSamplingFeatures].[CTE1].[DESCENDANTS].[feature_type]" />
+					<References Name="[dbo].[GetDescendentSamplingFeatures].[CTE1].[DESCENDANTS].[descendent_feature_type]" />
 				</Entry>
 			</Relationship>
 			<Relationship Name="Columns">
 				<Entry>
-					<Element Type="SqlComputedColumn" Name="[dbo].[GetDescendentSamplingFeatures].[sampling_feature_id]">
+					<Element Type="SqlComputedColumn" Name="[dbo].[GetDescendentSamplingFeatures].[descendent_sampling_feature_id]">
 						<Relationship Name="ExpressionDependencies">
 							<Entry>
-								<References Name="[dbo].[GetDescendentSamplingFeatures].[CTE1].[DESCENDANTS].[to_feature]" />
+								<References Name="[dbo].[GetDescendentSamplingFeatures].[CTE1].[DESCENDANTS].[descendent_sampling_feature_id]" />
 							</Entry>
 						</Relationship>
 					</Element>
 				</Entry>
 				<Entry>
-					<Element Type="SqlComputedColumn" Name="[dbo].[GetDescendentSamplingFeatures].[feature_namespace]">
+					<Element Type="SqlComputedColumn" Name="[dbo].[GetDescendentSamplingFeatures].[descendent_feature_namespace]">
 						<Relationship Name="ExpressionDependencies">
 							<Entry>
-								<References Name="[dbo].[GetDescendentSamplingFeatures].[CTE1].[DESCENDANTS].[feature_namespace]" />
+								<References Name="[dbo].[GetDescendentSamplingFeatures].[CTE1].[DESCENDANTS].[descendent_feature_namespace]" />
 							</Entry>
 						</Relationship>
 					</Element>
 				</Entry>
 				<Entry>
-					<Element Type="SqlComputedColumn" Name="[dbo].[GetDescendentSamplingFeatures].[feature_identifier]">
+					<Element Type="SqlComputedColumn" Name="[dbo].[GetDescendentSamplingFeatures].[descendent_feature_identifier]">
 						<Relationship Name="ExpressionDependencies">
 							<Entry>
-								<References Name="[dbo].[GetDescendentSamplingFeatures].[CTE1].[DESCENDANTS].[feature_identifier]" />
+								<References Name="[dbo].[GetDescendentSamplingFeatures].[CTE1].[DESCENDANTS].[descendent_feature_identifier]" />
 							</Entry>
 						</Relationship>
 					</Element>
 				</Entry>
 				<Entry>
-					<Element Type="SqlComputedColumn" Name="[dbo].[GetDescendentSamplingFeatures].[feature_type]">
+					<Element Type="SqlComputedColumn" Name="[dbo].[GetDescendentSamplingFeatures].[descendent_feature_type]">
 						<Relationship Name="ExpressionDependencies">
 							<Entry>
-								<References Name="[dbo].[GetDescendentSamplingFeatures].[CTE1].[DESCENDANTS].[feature_type]" />
+								<References Name="[dbo].[GetDescendentSamplingFeatures].[CTE1].[DESCENDANTS].[descendent_feature_type]" />
 							</Entry>
 						</Relationship>
 					</Element>
@@ -5291,7 +5431,7 @@
 					<Element Type="SqlDynamicColumnSource" Name="[dbo].[GetDescendentSamplingFeatures].[CTE1].[DESCENDANTS]">
 						<Relationship Name="Columns">
 							<Entry>
-								<Element Type="SqlComputedColumn" Name="[dbo].[GetDescendentSamplingFeatures].[CTE1].[DESCENDANTS].[to_feature]">
+								<Element Type="SqlComputedColumn" Name="[dbo].[GetDescendentSamplingFeatures].[CTE1].[DESCENDANTS].[descendent_sampling_feature_id]">
 									<Relationship Name="ExpressionDependencies">
 										<Entry>
 											<References Name="[dbo].[SAMPLING_FEATURE_RELATION].[to_sampling_feature_id]" />
@@ -5300,7 +5440,7 @@
 								</Element>
 							</Entry>
 							<Entry>
-								<Element Type="SqlComputedColumn" Name="[dbo].[GetDescendentSamplingFeatures].[CTE1].[DESCENDANTS].[feature_namespace]">
+								<Element Type="SqlComputedColumn" Name="[dbo].[GetDescendentSamplingFeatures].[CTE1].[DESCENDANTS].[descendent_feature_namespace]">
 									<Relationship Name="ExpressionDependencies">
 										<Entry>
 											<References Name="[dbo].[SAMPLING_FEATURE].[feature_namespace]" />
@@ -5309,7 +5449,7 @@
 								</Element>
 							</Entry>
 							<Entry>
-								<Element Type="SqlComputedColumn" Name="[dbo].[GetDescendentSamplingFeatures].[CTE1].[DESCENDANTS].[feature_identifier]">
+								<Element Type="SqlComputedColumn" Name="[dbo].[GetDescendentSamplingFeatures].[CTE1].[DESCENDANTS].[descendent_feature_identifier]">
 									<Relationship Name="ExpressionDependencies">
 										<Entry>
 											<References Name="[dbo].[SAMPLING_FEATURE].[feature_identifier]" />
@@ -5318,7 +5458,7 @@
 								</Element>
 							</Entry>
 							<Entry>
-								<Element Type="SqlComputedColumn" Name="[dbo].[GetDescendentSamplingFeatures].[CTE1].[DESCENDANTS].[feature_type]">
+								<Element Type="SqlComputedColumn" Name="[dbo].[GetDescendentSamplingFeatures].[CTE1].[DESCENDANTS].[descendent_feature_type]">
 									<Relationship Name="ExpressionDependencies">
 										<Entry>
 											<References Name="[dbo].[SAMPLING_FEATURE].[feature_type]" />
@@ -5336,7 +5476,7 @@
 						<Property Name="BodyScript">
 							<Value QuotedIdentifiers="True" AnsiNulls="True"><![CDATA[
 (
-	WITH DESCENDANTS(to_feature, feature_namespace, feature_identifier, feature_type)
+	WITH DESCENDANTS(descendent_sampling_feature_id, descendent_feature_namespace, descendent_feature_identifier, descendent_feature_type)
 	AS
 	(
 		SELECT	rel.[to_sampling_feature_id], 
@@ -5360,18 +5500,18 @@
 				INNER JOIN SAMPLING_FEATURE AS sfr
 					ON rel.to_sampling_feature_id = sfr.sampling_feature_id
 				INNER JOIN DESCENDANTS AS D1
-					ON rel.[from_sampling_feature_id] = D1.to_feature
+					ON rel.[from_sampling_feature_id] = D1.descendent_sampling_feature_id
 	)
 	-- Statement that executes the CTE
-	SELECT	D2.to_feature as sampling_feature_id,
-			D2.feature_namespace,
-			D2.feature_identifier,
-			D2.feature_type
+	SELECT	D2.descendent_sampling_feature_id,
+			D2.descendent_feature_namespace,
+			D2.descendent_feature_identifier,
+			D2.descendent_feature_type
 	FROM DESCENDANTS D2
 )]]></Value>
 						</Property>
 						<Annotation Type="SysCommentsObjectAnnotation">
-							<Property Name="Length" Value="1250" />
+							<Property Name="Length" Value="1353" />
 							<Property Name="StartLine" Value="1" />
 							<Property Name="StartColumn" Value="1" />
 							<Property Name="HeaderContents" Value="CREATE FUNCTION [dbo].[GetDescendentSamplingFeatures]&#xD;&#xA;(&#xD;&#xA;&#x9;@namespace VARCHAR(50),&#xD;&#xA;&#x9;@identifier VARCHAR(50)&#xD;&#xA;)&#xD;&#xA;RETURNS TABLE AS RETURN" />
@@ -8208,31 +8348,6 @@
 				</Entry>
 			</Relationship>
 		</Element>
-		<Element Type="SqlTableType" Name="[dbo].[IdTable]">
-			<Relationship Name="Columns">
-				<Entry>
-					<Element Type="SqlTableTypeSimpleColumn" Name="[dbo].[IdTable].[id]">
-						<Property Name="IsNullable" Value="True" />
-						<Relationship Name="TypeSpecifier">
-							<Entry>
-								<Element Type="SqlTypeSpecifier">
-									<Relationship Name="Type">
-										<Entry>
-											<References ExternalSource="BuiltIns" Name="[int]" />
-										</Entry>
-									</Relationship>
-								</Element>
-							</Entry>
-						</Relationship>
-					</Element>
-				</Entry>
-			</Relationship>
-			<Relationship Name="Schema">
-				<Entry>
-					<References ExternalSource="BuiltIns" Name="[dbo]" />
-				</Entry>
-			</Relationship>
-		</Element>
 		<Element Type="SqlProcedure" Name="[dbo].[ListCollections]">
 			<Property Name="BodyScript">
 				<Value QuotedIdentifiers="True" AnsiNulls="True"><![CDATA[
@@ -8536,8 +8651,64 @@
 					<References ExternalSource="BuiltIns" Name="[dbo]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="69" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="73" />
+			<AttachedAnnotation Disambiguator="46" />
 			<AttachedAnnotation Disambiguator="44" />
+			<AttachedAnnotation Disambiguator="45" />
+		</Element>
+		<Element Type="SqlIndex" Name="[dbo].[LOCATION].[IX_LOCATION_location_type]">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[LOCATION].[location_type]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="IndexedObject">
+				<Entry>
+					<References Name="[dbo].[LOCATION]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlIndex" Name="[dbo].[LOCATION].[IX_LOCATION_name]">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[LOCATION].[location_name]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="IndexedObject">
+				<Entry>
+					<References Name="[dbo].[LOCATION]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlIndex" Name="[dbo].[LOCATION].[IX_LOCATION_sampling_feature_id]">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[LOCATION].[sampling_feature_id]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="IndexedObject">
+				<Entry>
+					<References Name="[dbo].[LOCATION]" />
+				</Entry>
+			</Relationship>
 		</Element>
 		<Element Type="SqlSpatialIndex" Name="[dbo].[LOCATION].[SPATIAL_LOCATION_geographic_feature]">
 			<Relationship Name="Column">
@@ -8569,7 +8740,7 @@
 					<References Name="[dbo].[LOCATION]" />
 				</Entry>
 			</Relationship>
-			<AttachedAnnotation Disambiguator="69" />
+			<AttachedAnnotation Disambiguator="73" />
 		</Element>
 		<Element Type="SqlTable" Name="[dbo].[LOCATION_TYPE]">
 			<Property Name="IsAnsiNullsOn" Value="True" />
@@ -8589,7 +8760,7 @@
 								</Element>
 							</Entry>
 						</Relationship>
-						<AttachedAnnotation Disambiguator="12" />
+						<AttachedAnnotation Disambiguator="16" />
 					</Element>
 				</Entry>
 			</Relationship>
@@ -8599,11 +8770,30 @@
 				</Entry>
 			</Relationship>
 		</Element>
+		<Element Type="SqlIndex" Name="[dbo].[LOCATION_TYPE].[IX_LOCATION_LOCATION_TYPE]">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[LOCATION_TYPE].[location_type]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="IndexedObject">
+				<Entry>
+					<References Name="[dbo].[LOCATION_TYPE]" />
+				</Entry>
+			</Relationship>
+		</Element>
 		<Element Type="SqlTable" Name="[dbo].[MEDIA]">
 			<Property Name="IsAnsiNullsOn" Value="True" />
 			<Relationship Name="Columns">
 				<Entry>
 					<Element Type="SqlSimpleColumn" Name="[dbo].[MEDIA].[media]">
+						<Property Name="IsNullable" Value="False" />
 						<Relationship Name="TypeSpecifier">
 							<Entry>
 								<Element Type="SqlTypeSpecifier">
@@ -8624,6 +8814,7 @@
 					<References ExternalSource="BuiltIns" Name="[dbo]" />
 				</Entry>
 			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="74" />
 		</Element>
 		<Element Type="SqlTable" Name="[dbo].[OBSERVATION]">
 			<Property Name="IsAnsiNullsOn" Value="True" />
@@ -8711,7 +8902,6 @@
 				</Entry>
 				<Entry>
 					<Element Type="SqlSimpleColumn" Name="[dbo].[OBSERVATION].[phenomenon_time_end]">
-						<Property Name="IsNullable" Value="False" />
 						<Relationship Name="TypeSpecifier">
 							<Entry>
 								<Element Type="SqlTypeSpecifier">
@@ -8862,12 +9052,12 @@
 					<References ExternalSource="BuiltIns" Name="[dbo]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="70" />
-			<AttachedAnnotation Disambiguator="48" />
-			<AttachedAnnotation Disambiguator="49" />
-			<AttachedAnnotation Disambiguator="51" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="75" />
 			<AttachedAnnotation Disambiguator="50" />
-			<AttachedAnnotation Disambiguator="47" />
+			<AttachedAnnotation Disambiguator="51" />
+			<AttachedAnnotation Disambiguator="53" />
+			<AttachedAnnotation Disambiguator="52" />
+			<AttachedAnnotation Disambiguator="49" />
 		</Element>
 		<Element Type="SqlIndex" Name="[dbo].[OBSERVATION].[IX_OBSERVATION_phenomenon_id]">
 			<Relationship Name="ColumnSpecifications">
@@ -8950,6 +9140,33 @@
 				</Entry>
 			</Relationship>
 		</Element>
+		<Element Type="SqlIndex" Name="[dbo].[OBSERVATION].[IX_OBSERVATION_timerev]">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[OBSERVATION].[phenomenon_time_end]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[OBSERVATION].[phenomenon_time_start]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="IndexedObject">
+				<Entry>
+					<References Name="[dbo].[OBSERVATION]" />
+				</Entry>
+			</Relationship>
+		</Element>
 		<Element Type="SqlTable" Name="[dbo].[OBSERVATION_COLLECTION]">
 			<Property Name="IsAnsiNullsOn" Value="True" />
 			<Relationship Name="Columns">
@@ -9009,8 +9226,8 @@
 				</Entry>
 			</Relationship>
 			<AttachedAnnotation Disambiguator="5" />
-			<AttachedAnnotation Disambiguator="45" />
-			<AttachedAnnotation Disambiguator="46" />
+			<AttachedAnnotation Disambiguator="47" />
+			<AttachedAnnotation Disambiguator="48" />
 			<AttachedAnnotation Disambiguator="23" />
 		</Element>
 		<Element Type="SqlPrimaryKeyConstraint" Name="[dbo].[OBSERVATION_PK]">
@@ -9031,7 +9248,7 @@
 					<References Name="[dbo].[OBSERVATION]" />
 				</Entry>
 			</Relationship>
-			<AttachedAnnotation Disambiguator="70" />
+			<AttachedAnnotation Disambiguator="75" />
 		</Element>
 		<Element Type="SqlTable" Name="[dbo].[OBSERVATION_STATUS]">
 			<Property Name="IsAnsiNullsOn" Value="True" />
@@ -9051,7 +9268,7 @@
 								</Element>
 							</Entry>
 						</Relationship>
-						<AttachedAnnotation Disambiguator="11" />
+						<AttachedAnnotation Disambiguator="15" />
 					</Element>
 				</Entry>
 			</Relationship>
@@ -9264,11 +9481,11 @@
 					<References ExternalSource="BuiltIns" Name="[dbo]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="71" />
-			<AttachedAnnotation Disambiguator="53" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="76" />
+			<AttachedAnnotation Disambiguator="55" />
 			<AttachedAnnotation Disambiguator="24" />
-			<AttachedAnnotation Disambiguator="52" />
 			<AttachedAnnotation Disambiguator="54" />
+			<AttachedAnnotation Disambiguator="56" />
 		</Element>
 		<Element Type="SqlIndex" Name="[dbo].[PHENOMENON].[IX_PHENOMENON_phenomenon_code]">
 			<Relationship Name="ColumnSpecifications">
@@ -9380,7 +9597,26 @@
 					<References Name="[dbo].[GENERIC_PROPERTY]" />
 				</Entry>
 			</Relationship>
-			<AttachedAnnotation Disambiguator="68" />
+			<AttachedAnnotation Disambiguator="72" />
+		</Element>
+		<Element Type="SqlPrimaryKeyConstraint" Name="[dbo].[PK_MEDIA]">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[MEDIA].[media]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[MEDIA]" />
+				</Entry>
+			</Relationship>
+			<AttachedAnnotation Disambiguator="74" />
 		</Element>
 		<Element Type="SqlPrimaryKeyConstraint" Name="[dbo].[PK_PHENOMENON]">
 			<Property Name="FillFactor" Value="90" />
@@ -9400,7 +9636,7 @@
 					<References Name="[dbo].[PHENOMENON]" />
 				</Entry>
 			</Relationship>
-			<AttachedAnnotation Disambiguator="71" />
+			<AttachedAnnotation Disambiguator="76" />
 		</Element>
 		<Element Type="SqlPrimaryKeyConstraint" Name="[dbo].[PK_RESULT_CATEGORY]">
 			<Property Name="FillFactor" Value="90" />
@@ -9420,7 +9656,7 @@
 					<References Name="[dbo].[RESULT_CATEGORY]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="72" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="77" />
 		</Element>
 		<Element Type="SqlPrimaryKeyConstraint" Name="[dbo].[PK_UNIT]">
 			<Property Name="FillFactor" Value="90" />
@@ -9440,7 +9676,7 @@
 					<References Name="[dbo].[UNIT]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="73" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="78" />
 		</Element>
 		<Element Type="SqlTable" Name="[dbo].[PROCESS]">
 			<Property Name="IsAnsiNullsOn" Value="True" />
@@ -9617,9 +9853,27 @@
 					<References ExternalSource="BuiltIns" Name="[dbo]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="74" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="79" />
 			<AttachedAnnotation Disambiguator="25" />
-			<AttachedAnnotation Disambiguator="55" />
+			<AttachedAnnotation Disambiguator="57" />
+		</Element>
+		<Element Type="SqlIndex" Name="[dbo].[PROCESS].[IX_PROCESS_process_name]">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[PROCESS].[process_name]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="IndexedObject">
+				<Entry>
+					<References Name="[dbo].[PROCESS]" />
+				</Entry>
+			</Relationship>
 		</Element>
 		<Element Type="SqlTable" Name="[dbo].[PROCESS_TYPE]">
 			<Property Name="IsAnsiNullsOn" Value="True" />
@@ -9639,7 +9893,7 @@
 								</Element>
 							</Entry>
 						</Relationship>
-						<AttachedAnnotation Disambiguator="13" />
+						<AttachedAnnotation Disambiguator="17" />
 					</Element>
 				</Entry>
 			</Relationship>
@@ -9667,7 +9921,7 @@
 					<References Name="[dbo].[PROCESS]" />
 				</Entry>
 			</Relationship>
-			<AttachedAnnotation Disambiguator="74" />
+			<AttachedAnnotation Disambiguator="79" />
 		</Element>
 		<Element Type="SqlTable" Name="[dbo].[QUALITY_CONTROL_LEVEL]">
 			<Property Name="IsAnsiNullsOn" Value="True" />
@@ -9715,7 +9969,7 @@
 								</Element>
 							</Entry>
 						</Relationship>
-						<AttachedAnnotation Disambiguator="17" />
+						<AttachedAnnotation Disambiguator="14" />
 					</Element>
 				</Entry>
 				<Entry>
@@ -9804,12 +10058,20 @@
 					<References ExternalSource="BuiltIns" Name="[dbo]" />
 				</Entry>
 			</Relationship>
-			<AttachedAnnotation Disambiguator="56" />
-			<AttachedAnnotation Disambiguator="57" />
 			<AttachedAnnotation Disambiguator="58" />
+			<AttachedAnnotation Disambiguator="59" />
+			<AttachedAnnotation Disambiguator="60" />
 			<AttachedAnnotation Disambiguator="26" />
 		</Element>
 		<Element Type="SqlIndex" Name="[dbo].[QUANTITY_RESULT].[IX_QUANTITY_RESULT_phenomenon_id]">
+			<Property Name="FilterPredicate">
+				<Value><![CDATA[[phenomenon_id] IS NOT NULL]]></Value>
+			</Property>
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[QUANTITY_RESULT].[phenomenon_id]" />
+				</Entry>
+			</Relationship>
 			<Relationship Name="ColumnSpecifications">
 				<Entry>
 					<Element Type="SqlIndexedColumnSpecification">
@@ -9904,7 +10166,7 @@
 					<References ExternalSource="BuiltIns" Name="[dbo]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="75" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="80" />
 			<AttachedAnnotation Disambiguator="27" />
 		</Element>
 		<Element Type="SqlPrimaryKeyConstraint" Name="[dbo].[RELATIONSHIP_PK]">
@@ -9925,7 +10187,7 @@
 					<References Name="[dbo].[RELATIONSHIP]" />
 				</Entry>
 			</Relationship>
-			<AttachedAnnotation Disambiguator="75" />
+			<AttachedAnnotation Disambiguator="80" />
 		</Element>
 		<Element Type="SqlForeignKeyConstraint" Name="[dbo].[RELATIONSHIP_SAMPLING_FEATURE_RELATION_FK1]">
 			<Relationship Name="Columns">
@@ -9948,7 +10210,7 @@
 					<References Name="[dbo].[RELATIONSHIP]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="76" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="81" />
 		</Element>
 		<Element Type="SqlTable" Name="[dbo].[RESULT_CATEGORY]">
 			<Property Name="IsAnsiNullsOn" Value="True" />
@@ -10040,9 +10302,9 @@
 					<References ExternalSource="BuiltIns" Name="[dbo]" />
 				</Entry>
 			</Relationship>
-			<AttachedAnnotation Disambiguator="72" />
-			<AttachedAnnotation Disambiguator="59" />
-			<AttachedAnnotation Disambiguator="60" />
+			<AttachedAnnotation Disambiguator="77" />
+			<AttachedAnnotation Disambiguator="61" />
+			<AttachedAnnotation Disambiguator="62" />
 			<AttachedAnnotation Disambiguator="28" />
 		</Element>
 		<Element Type="SqlTable" Name="[dbo].[RESULT_TYPE]">
@@ -10244,10 +10506,12 @@
 					<References ExternalSource="BuiltIns" Name="[dbo]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="77" />
-			<AttachedAnnotation Disambiguator="61" />
-			<AttachedAnnotation Disambiguator="62" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="82" />
+			<AttachedAnnotation Disambiguator="64" />
+			<AttachedAnnotation Disambiguator="65" />
+			<AttachedAnnotation Disambiguator="67" />
 			<AttachedAnnotation Disambiguator="63" />
+			<AttachedAnnotation Disambiguator="66" />
 		</Element>
 		<Element Type="SqlIndex" Name="[dbo].[SAMPLE].[IX_SAMPLE_collection_process_id]">
 			<Relationship Name="ColumnSpecifications">
@@ -10321,7 +10585,7 @@
 					<References Name="[dbo].[SAMPLE]" />
 				</Entry>
 			</Relationship>
-			<AttachedAnnotation Disambiguator="77" />
+			<AttachedAnnotation Disambiguator="82" />
 		</Element>
 		<Element Type="SqlTable" Name="[dbo].[SAMPLE_TYPE]">
 			<Property Name="IsAnsiNullsOn" Value="True" />
@@ -10376,6 +10640,24 @@
 			<Relationship Name="Schema">
 				<Entry>
 					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlIndex" Name="[dbo].[SAMPLED_FEATURE_TYPE].[IX_LOCATION_SAMPLED_FEATURE_TYPE]">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[SAMPLED_FEATURE_TYPE].[sampled_feature_type]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="IndexedObject">
+				<Entry>
+					<References Name="[dbo].[SAMPLED_FEATURE_TYPE]" />
 				</Entry>
 			</Relationship>
 		</Element>
@@ -10472,7 +10754,7 @@
 					<References ExternalSource="BuiltIns" Name="[dbo]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="78" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="83" />
 			<AttachedAnnotation Disambiguator="29" />
 		</Element>
 		<Element Type="SqlIndex" Name="[dbo].[SAMPLING_FEATURE].[IX_SAMPLING_FEATURE_identifier]">
@@ -10525,7 +10807,7 @@
 					<References Name="[dbo].[SAMPLING_FEATURE]" />
 				</Entry>
 			</Relationship>
-			<AttachedAnnotation Disambiguator="78" />
+			<AttachedAnnotation Disambiguator="83" />
 		</Element>
 		<Element Type="SqlTable" Name="[dbo].[SAMPLING_FEATURE_RELATION]">
 			<Property Name="IsAnsiNullsOn" Value="True" />
@@ -10601,10 +10883,10 @@
 					<References ExternalSource="BuiltIns" Name="[dbo]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="79" />
-			<AttachedAnnotation Disambiguator="64" />
-			<AttachedAnnotation Disambiguator="65" />
-			<AttachedAnnotation Disambiguator="76" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="84" />
+			<AttachedAnnotation Disambiguator="68" />
+			<AttachedAnnotation Disambiguator="69" />
+			<AttachedAnnotation Disambiguator="81" />
 			<AttachedAnnotation Disambiguator="30" />
 		</Element>
 		<Element Type="SqlPrimaryKeyConstraint" Name="[dbo].[SAMPLING_FEATURE_RELATION_PK]">
@@ -10625,7 +10907,7 @@
 					<References Name="[dbo].[SAMPLING_FEATURE_RELATION]" />
 				</Entry>
 			</Relationship>
-			<AttachedAnnotation Disambiguator="79" />
+			<AttachedAnnotation Disambiguator="84" />
 		</Element>
 		<Element Type="SqlProcedure" Name="[dbo].[SearchLocations]">
 			<Property Name="BodyScript">
@@ -10642,10 +10924,10 @@
 				vl.longitude,
 				vl.feature_geometry,
 				vl.sampling_feature_id
-			FROM V_LOCATION AS vl
-				LEFT JOIN FEATURE_PROPERTY AS fp
+			FROM [dbo].[V_LOCATION] AS vl
+				LEFT JOIN [dbo].[FEATURE_PROPERTY] AS fp
 					ON vl.sampling_feature_id = fp.sampling_feature_id
-				LEFT JOIN GENERIC_PROPERTY AS gp
+				LEFT JOIN [dbo].[GENERIC_PROPERTY] AS gp
 					ON fp.generic_property_id = gp.generic_property_id
 			WHERE	(gp.property_name = @property OR @property IS NULL)
 					AND (fp.property_value = @value OR @value IS NULL)
@@ -10666,10 +10948,10 @@
 				vl.longitude,
 				vl.feature_geometry,
 				vl.sampling_feature_id
-			FROM V_LOCATION AS vl
-				LEFT JOIN FEATURE_PROPERTY AS fp
+			FROM [dbo].[V_LOCATION] AS vl
+				LEFT JOIN [dbo].[FEATURE_PROPERTY] AS fp
 					ON vl.sampling_feature_id = fp.sampling_feature_id
-				LEFT JOIN GENERIC_PROPERTY AS gp
+				LEFT JOIN [dbo].[GENERIC_PROPERTY] AS gp
 					ON fp.generic_property_id = gp.generic_property_id
 			WHERE	(gp.property_name = @property OR @property IS NULL)
 					AND (fp.property_value = @value OR @value IS NULL)
@@ -10925,7 +11207,7 @@
 				</Entry>
 			</Relationship>
 			<Annotation Type="SysCommentsObjectAnnotation">
-				<Property Name="Length" Value="2211" />
+				<Property Name="Length" Value="2259" />
 				<Property Name="StartLine" Value="1" />
 				<Property Name="StartColumn" Value="1" />
 				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[SearchLocations]&#xD;&#xA;&#x9;@namespace&#x9;&#x9;VARCHAR(50) = NULL,&#xD;&#xA;&#x9;@identifier&#x9;&#x9;VARCHAR(50) = NULL,&#xD;&#xA;&#x9;@name&#x9;&#x9;&#x9;VARCHAR(255) = NULL,&#xD;&#xA;&#x9;@location_type&#x9;VARCHAR(50) = NULL,&#xD;&#xA;&#x9;@bbox&#x9;&#x9;&#x9;VARCHAR(MAX) = NULL,&#xD;&#xA;&#x9;@srid&#x9;&#x9;&#x9;INT = NULL,&#xD;&#xA;&#x9;@property&#x9;&#x9;VARCHAR(50) = NULL,&#xD;&#xA;&#x9;@value&#x9;&#x9;&#x9;VARCHAR(200) = NULL&#xD;&#xA;AS" />
@@ -11236,10 +11518,10 @@
 			vs.sample_id,
 			vs.collection_process_id,
 			vs.handling_process_id
-		FROM V_SAMPLE AS vs
-			LEFT JOIN FEATURE_PROPERTY AS fp
+		FROM [dbo].[V_SAMPLE] AS vs
+			LEFT JOIN [dbo].[FEATURE_PROPERTY] AS fp
 				ON vs.sampling_feature_id = fp.sampling_feature_id
-			LEFT JOIN GENERIC_PROPERTY AS gp
+			LEFT JOIN [dbo].[GENERIC_PROPERTY] AS gp
 				ON fp.generic_property_id = gp.generic_property_id
 		WHERE	(gp.property_name = @property OR @property IS NULL)
 				AND (fp.property_value = @value OR @value IS NULL)
@@ -11552,7 +11834,7 @@
 				</Entry>
 			</Relationship>
 			<Annotation Type="SysCommentsObjectAnnotation">
-				<Property Name="Length" Value="1602" />
+				<Property Name="Length" Value="1626" />
 				<Property Name="StartLine" Value="1" />
 				<Property Name="StartColumn" Value="1" />
 				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[SearchSamples]&#xD;&#xA;&#x9;@namespace&#x9;&#x9;VARCHAR(50) = NULL,&#xD;&#xA;&#x9;@identifier&#x9;&#x9;VARCHAR(50) = NULL,&#xD;&#xA;&#x9;@start_date&#x9;&#x9;DATETIME = NULL,&#xD;&#xA;&#x9;@end_date&#x9;&#x9;DATETIME = NULL,&#xD;&#xA;&#x9;@media&#x9;&#x9;&#x9;VARCHAR(50) = NULL,&#xD;&#xA;&#x9;@sample_type&#x9;VARCHAR(100) = Null,&#xD;&#xA;&#x9;@is_compliance&#x9;BIT = NULL,&#xD;&#xA;&#x9;@is_qc&#x9;&#x9;&#x9;BIT = NULL,&#xD;&#xA;&#x9;@property&#x9;&#x9;VARCHAR(50) = NULL,&#xD;&#xA;&#x9;@value&#x9;&#x9;&#x9;VARCHAR(200) = NULL&#xD;&#xA;AS" />
@@ -11563,7 +11845,7 @@
 				<Value><![CDATA[
 SET NOCOUNT ON;
 
-	MERGE INTO LOCATION_TYPE AS [target]
+	MERGE INTO [dbo].LOCATION_TYPE AS [target]
 	USING (VALUES
 		('Borehole'),
 		('Plot'),
@@ -11599,7 +11881,7 @@ SET NOCOUNT ON;
 				</Entry>
 			</Relationship>
 			<Annotation Type="SysCommentsObjectAnnotation">
-				<Property Name="Length" Value="465" />
+				<Property Name="Length" Value="471" />
 				<Property Name="StartLine" Value="1" />
 				<Property Name="StartColumn" Value="1" />
 				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[SetUpLocationType]&#xD;&#xA;AS" />
@@ -11732,6 +12014,7 @@ SET NOCOUNT ON;
 
 	MERGE INTO QUALITY_CONTROL_LEVEL AS [target]
 	USING (VALUES
+		('Unknown'),
 		('Raw Data'),
 		('Quality Controlled Data'),
 		('Derived Products'),
@@ -11763,7 +12046,7 @@ SET NOCOUNT ON;
 				</Entry>
 			</Relationship>
 			<Annotation Type="SysCommentsObjectAnnotation">
-				<Property Name="Length" Value="519" />
+				<Property Name="Length" Value="535" />
 				<Property Name="StartLine" Value="1" />
 				<Property Name="StartColumn" Value="1" />
 				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[SetUpQualityControlLevel]&#xD;&#xA;AS" />
@@ -12436,7 +12719,7 @@ SET NOCOUNT ON;
 					<References ExternalSource="BuiltIns" Name="[dbo]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="80" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="85" />
 			<AttachedAnnotation Disambiguator="31" />
 			<AttachedAnnotation Disambiguator="32" />
 		</Element>
@@ -12458,7 +12741,7 @@ SET NOCOUNT ON;
 					<References Name="[dbo].[TAXON]" />
 				</Entry>
 			</Relationship>
-			<AttachedAnnotation Disambiguator="80" />
+			<AttachedAnnotation Disambiguator="85" />
 		</Element>
 		<Element Type="SqlTable" Name="[dbo].[TIME_SERIES_RESULT]">
 			<Property Name="IsAnsiNullsOn" Value="True" />
@@ -12478,7 +12761,7 @@ SET NOCOUNT ON;
 								</Element>
 							</Entry>
 						</Relationship>
-						<AttachedAnnotation Disambiguator="16" />
+						<AttachedAnnotation Disambiguator="12" />
 					</Element>
 				</Entry>
 				<Entry>
@@ -12601,8 +12884,8 @@ SET NOCOUNT ON;
 					<References ExternalSource="BuiltIns" Name="[dbo]" />
 				</Entry>
 			</Relationship>
-			<AttachedAnnotation Disambiguator="66" />
-			<AttachedAnnotation Disambiguator="67" />
+			<AttachedAnnotation Disambiguator="70" />
+			<AttachedAnnotation Disambiguator="71" />
 			<AttachedAnnotation Disambiguator="33" />
 		</Element>
 		<Element Type="SqlIndex" Name="[dbo].[TIME_SERIES_RESULT].[IX_TIME_SERIES_RESULT_observation_id]">
@@ -12652,7 +12935,7 @@ SET NOCOUNT ON;
 									<Property Name="Length" Value="30" />
 									<Relationship Name="Type">
 										<Entry>
-											<References ExternalSource="BuiltIns" Name="[varchar]" />
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
 										</Entry>
 									</Relationship>
 								</Element>
@@ -12698,7 +12981,7 @@ SET NOCOUNT ON;
 					<References ExternalSource="BuiltIns" Name="[dbo]" />
 				</Entry>
 			</Relationship>
-			<AttachedAnnotation Disambiguator="73" />
+			<AttachedAnnotation Disambiguator="78" />
 			<AttachedAnnotation Disambiguator="34" />
 		</Element>
 		<Element Type="SqlView" Name="[dbo].[V_LOCATION]">
@@ -12894,13 +13177,13 @@ SET NOCOUNT ON;
 				pr.process_id,
 				ph.phenomenon_id
 		FROM	[dbo].[OBSERVATION] AS obs
-				INNER JOIN [dbo].[SAMPLING_FEATURE] sf 
+				LEFT JOIN [dbo].[SAMPLING_FEATURE] sf 
 					ON obs.sampling_feature_id = sf.sampling_feature_id
-				INNER JOIN [dbo].[PHENOMENON] AS ph
+				LEFT JOIN [dbo].[PHENOMENON] AS ph
 					ON obs.[phenomenon_id] = ph.phenomenon_id
-				INNER JOIN [dbo].[PROCESS] AS pr
+				LEFT JOIN [dbo].[PROCESS] AS pr
 					ON [obs].[process_id] = pr.process_id
-				INNER JOIN [dbo].[V_RESULT] as vr
+				LEFT JOIN [dbo].[V_RESULT] as vr
 					ON obs.observation_id = vr.observation_id]]></Value>
 			</Property>
 			<Property Name="IsAnsiNullsOn" Value="True" />
@@ -13250,7 +13533,7 @@ SET NOCOUNT ON;
 				</Entry>
 			</Relationship>
 			<Annotation Type="SysCommentsObjectAnnotation">
-				<Property Name="Length" Value="1241" />
+				<Property Name="Length" Value="1237" />
 				<Property Name="StartLine" Value="1" />
 				<Property Name="StartColumn" Value="1" />
 				<Property Name="HeaderContents" Value="CREATE VIEW [dbo].[V_OBSERVATION]&#xD;&#xA;&#x9;AS" />
@@ -13268,10 +13551,10 @@ SET NOCOUNT ON;
 			Null as result_time_local,
 			Null as result_time_local_offset,
 			qr.observation_id
-		FROM [QUANTITY_RESULT] AS qr
-			INNER JOIN [PHENOMENON] as p1
+		FROM [dbo].[QUANTITY_RESULT] AS qr
+			LEFT JOIN [dbo].[PHENOMENON] as p1
 				ON qr.phenomenon_id = p1.phenomenon_id
-			INNER JOIN [UNIT] as u
+			LEFT JOIN [dbo].[UNIT] as u
 				ON qr.unit_id = u.unit_id
 	
 	UNION ALL
@@ -13285,10 +13568,10 @@ SET NOCOUNT ON;
 			Null as result_time_local,
 			Null as result_time_local_offset,
 			cr.observation_id
-		FROM [CATEGORICAL_RESULT] AS cr
-			INNER JOIN [RESULT_CATEGORY] AS rc
+		FROM [dbo].[CATEGORICAL_RESULT] AS cr
+			LEFT JOIN [dbo].[RESULT_CATEGORY] AS rc
 				ON cr.category_result_id = rc.result_category_id
-			INNER JOIN [PHENOMENON] as p2
+			LEFT JOIN [dbo].[PHENOMENON] as p2
 				ON cr.phenomenon_id = p2.phenomenon_id
 	
 	UNION ALL
@@ -13302,8 +13585,8 @@ SET NOCOUNT ON;
 			Null as result_time_local,
 			Null as result_time_local_offset,
 			cnt.observation_id
-		FROM [COUNT_RESULT] AS cnt
-			INNER JOIN [PHENOMENON] as p3
+		FROM [dbo].[COUNT_RESULT] AS cnt
+			LEFT JOIN [dbo].[PHENOMENON] as p3
 				ON cnt.phenomenon_id = p3.phenomenon_id
 
 	UNION ALL
@@ -13317,8 +13600,8 @@ SET NOCOUNT ON;
 			ts.result_time_local,
 			ts.result_time_local_offset,
 			ts.observation_id
-		FROM [TIME_SERIES_RESULT] AS ts
-			INNER JOIN [UNIT] as u
+		FROM [dbo].[TIME_SERIES_RESULT] AS ts
+			LEFT JOIN [dbo].[UNIT] as u
 				ON ts.unit_id = u.unit_id]]></Value>
 			</Property>
 			<Property Name="IsAnsiNullsOn" Value="True" />
@@ -13521,7 +13804,7 @@ SET NOCOUNT ON;
 				</Entry>
 			</Relationship>
 			<Annotation Type="SysCommentsObjectAnnotation">
-				<Property Name="Length" Value="1800" />
+				<Property Name="Length" Value="1854" />
 				<Property Name="StartLine" Value="1" />
 				<Property Name="StartColumn" Value="1" />
 				<Property Name="HeaderContents" Value="CREATE VIEW [dbo].[V_RESULT]&#xD;&#xA;&#x9;AS" />
@@ -13931,6 +14214,16 @@ SET NOCOUNT ON;
 				<Property Name="StartColumn" Value="1" />
 				<Property Name="HeaderContents" Value="CREATE VIEW [dbo].[V_SAMPLING_FEATURE_RELATION]&#xD;&#xA;&#x9;AS" />
 			</Annotation>
+		</Element>
+		<Element Type="SqlExtendedProperty" Name="[SqlColumn].[dbo].[OBSERVATION].[phenomenon_time_end].[MS_Description]">
+			<Property Name="Value">
+				<Value QuotedIdentifiers="True" AnsiNulls="True"><![CDATA[N'End of observation; allows nulls so that observations which have not ended yet can be stored.']]></Value>
+			</Property>
+			<Relationship Name="Host">
+				<Entry>
+					<References Name="[dbo].[OBSERVATION].[phenomenon_time_end]" />
+				</Entry>
+			</Relationship>
 		</Element>
 		<Element Type="SqlExtendedProperty" Name="[SqlTableBase].[dbo].[LOCATION].[Description]">
 			<Property Name="Value">

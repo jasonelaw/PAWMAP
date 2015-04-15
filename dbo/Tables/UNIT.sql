@@ -1,6 +1,6 @@
 ﻿CREATE TABLE [dbo].[UNIT] (
     [unit_id]          INT           IDENTITY (1, 1) NOT NULL,
-    [unit_print]       VARCHAR (30) NOT NULL,
+    [unit_print]       NVARCHAR(30) NOT NULL,
     [unit_description] VARCHAR (255) NULL,
     [unit_ucum]        VARCHAR (30)  NULL,
     CONSTRAINT [PK_UNIT] PRIMARY KEY CLUSTERED ([unit_id] ASC) WITH (FILLFACTOR = 90),

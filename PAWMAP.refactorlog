@@ -287,4 +287,16 @@
     <Property Name="ParentElementType" Value="SqlTable" />
     <Property Name="NewName" Value="process_type" />
   </Operation>
+  <Operation Name="Move Schema" Key="42a50d23-437b-4130-a3a8-88f76347a1a4" ChangeDateTime="07/22/2014 23:44:55">
+    <Property Name="ElementName" Value="[dbo].[LOCATION_TYPE]" />
+    <Property Name="ElementType" Value="SqlTable" />
+    <Property Name="NewSchema" Value="LOOKUP" />
+    <Property Name="IsNewSchemaExternal" Value="False" />
+  </Operation>
+  <Operation Name="Move Schema" Key="08fcaf89-d6ed-41c1-80fb-2cd7ab15c225" ChangeDateTime="07/23/2014 00:08:07">
+    <Property Name="ElementName" Value="[LOOKUP].[LOCATION_TYPE]" />
+    <Property Name="ElementType" Value="SqlTable" />
+    <Property Name="NewSchema" Value="dbo" />
+    <Property Name="IsNewSchemaExternal" Value="True" />
+  </Operation>
 </Operations>

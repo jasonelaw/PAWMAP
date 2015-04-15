@@ -13,4 +13,6 @@
 
 GO
 
-CREATE INDEX [IX_COUNT_RESULT_phenomenon_id] ON [dbo].[COUNT_RESULT] ([phenomenon_id])
+CREATE INDEX [IX_COUNT_RESULT_phenomenon_id] 
+	ON [dbo].[COUNT_RESULT] ([phenomenon_id])
+	WHERE [phenomenon_id] IS NOT NULL;

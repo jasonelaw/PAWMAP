@@ -169,8 +169,10 @@ SET @temp = (SELECT TOP 1 phenomenon_id FROM PHENOMENON WHERE phenomenon_code = 
 SET @colpr = (SELECT TOP 1 process_id FROM PROCESS WHERE process_name = N'Measure color');
 SET @temppr = (SELECT TOP 1 process_id FROM PROCESS WHERE process_name = N'Measure temp');
 
-INSERT INTO OBSERVATION VALUES (@sfid1, @col, @colpr, '2000-01-01 00:00', '2000-01-01 00:00', 'FO', '2000-01-01 00:00', Null, N'No comment', 'Raw Data', 'Preliminary', GETDATE() , 'None');
-INSERT INTO OBSERVATION VALUES (@sfid1, @temp, @temppr, '2000-01-01 00:00', '2000-01-01 01:00', 'FO', '2000-01-01 01:00', Null, N'No comment', 'Raw Data', 'Preliminary', GETDATE() , 'None');
+INSERT INTO OBSERVATION 
+	VALUES 
+		(@sfid1, @col, @colpr, '2000-01-01 00:00', '2000-01-01 00:00', 'FO', '2000-01-01 00:00', Null, N'No comment', 'Raw Data', 'Preliminary', GETDATE() , 'None'),
+		(@sfid1, @temp, @temppr, '2000-01-01 00:00', '2000-01-01 01:00', 'FO', '2000-01-01 01:00', Null, N'No comment', 'Raw Data', 'Preliminary', GETDATE() , 'None');
 
 DECLARE @oid	INT,
 		@red	INT,
@@ -180,7 +182,10 @@ SET	@oid = (SELECT TOP 1 observation_id FROM OBSERVATION WHERE phenomenon_id = @
 SET	@red = (SELECT TOP 1 phenomenon_id FROM PHENOMENON WHERE phenomenon_code = 'red');
 SET	@blue = (SELECT TOP 1 phenomenon_id FROM PHENOMENON WHERE phenomenon_code = 'blue');
 SET	@green = (SELECT TOP 1 phenomenon_id FROM PHENOMENON WHERE phenomenon_code = 'green');
-INSERT INTO COUNT_RESULT VALUES (150, Null, @red, @oid);
-INSERT INTO COUNT_RESULT VALUES (150, Null, @blue, @oid);
-INSERT INTO COUNT_RESULT VALUES (150, Null, @green, @oid);
+INSERT INTO COUNT_RESULT 
+	VALUES 
+		(150, Null, @red, @oid),
+		(150, Null, @blue, @oid),
+		(150, Null, @green, @oid);
+
 

@@ -4,6 +4,7 @@ SET NOCOUNT ON;
 
 	MERGE INTO QUALITY_CONTROL_LEVEL AS [target]
 	USING (VALUES
+		('Unknown'),
 		('Raw Data'),
 		('Quality Controlled Data'),
 		('Derived Products'),

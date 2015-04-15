@@ -9,8 +9,9 @@ EXEC	[dbo].[SearchLocations]
 		@bbox = N'POLYGON((175.0 44,185 44,185 46,175 46,175 44))',
 		@srid = 4326
 
-EXEC	[dbo].[SearchSamples]
-		@namespace = N'DEF'
+EXEC	[dbo].[SearchLocations]
+		@property = N'slid reach',
+		@value = N'Yes'
 
 EXEC	[dbo].[SearchObservations]
 		@observed_property_name = N'color'
@@ -23,11 +24,6 @@ SELECT *
 			ON fp.generic_property_id = gp.generic_property_id
 
 SELECT * FROM V_SAMPLE
-
-SELECT vo.*
-	FROM dbo.GetDescendentSamplingFeatures2(N'ABC', N'123') AS f
-		INNER JOIN V_OBSERVATION AS vo
-			ON f.sampling_feature_id = vo.sampling_feature_id
 
 SELECT * FROM dbo.GetDescendentSamplingFeatures(N'ABC', N'123');
 
@@ -63,17 +59,20 @@ SELECT * FROM dbo.GetAncestorSamplingFeatures('DEF', '002')
 
 SELECT *
 	FROM V_SAMPLING_FEATURE_RELATION AS v
-		INNER JOIN dbo.GetAncestorSamplingFeatures('DEF', '002') AS anc
+		LEFT JOIN dbo.GetAncestorSamplingFeatures('DEF', '002') AS anc
 			ON v.from_sampling_feature_id = anc.sampling_feature_id;
 
-SELECT sf.*, anc.feature_identifier, anc.feature_namespace, anc.feature_type
+SELECT sf.feature_namespace as location_namespace, sf.feature_identifier as location_code, anc.descendent_feature_namespace as sample_namespace, anc.descendent_feature_identifier as sample_identifier
 FROM SAMPLING_FEATURE as sf
-    CROSS APPLY GetAncestorSamplingFeatures(sf.feature_namespace, sf.feature_identifier) AS anc
-WHERE sf.feature_namespace = 'DEF';
+    CROSS APPLY GetDescendentSamplingFeatures(sf.feature_namespace, sf.feature_identifier) AS anc
+WHERE sf.feature_type = 'Location' AND anc.descendent_feature_type = 'Sample';
 
 EXEC	SearchObservations
 		@observed_property_code = 'color',
 		@maxdate = '2014-07-01 11:16:53'
+
+EXEC	SearchObservations
+		@observed_property_code = 'temp'
 
 DECLARE @g geography = 'LINESTRING(-120 45, -120 0, -90 0)'; 
 SELECT @g.EnvelopeAngle(), @g.EnvelopeCenter().Lat;

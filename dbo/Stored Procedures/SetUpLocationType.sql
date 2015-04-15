@@ -2,7 +2,7 @@
 AS
 SET NOCOUNT ON;
 
-	MERGE INTO LOCATION_TYPE AS [target]
+	MERGE INTO [dbo].LOCATION_TYPE AS [target]
 	USING (VALUES
 		('Borehole'),
 		('Plot'),

@@ -10,5 +10,27 @@
 	@process_type VARCHAR(30)
 AS
 	SET NOCOUNT ON;
-	INSERT INTO PROCESS (process_name, process_description, method_name, method_publisher, method_code, method_version, instrument, nemi_method_id, process_type) 
-		VALUES (@name, @description, @method_name, @method_publisher, @method_code, @method_version, @instrument, @nemi_method_id, @process_type);
+	INSERT INTO [dbo].[PROCESS]
+		(
+			[dbo].[PROCESS].[process_name], 
+			[dbo].[PROCESS].[process_description], 
+			[dbo].[PROCESS].[method_name], 
+			[dbo].[PROCESS].[method_publisher], 
+			[dbo].[PROCESS].[method_code], 
+			[dbo].[PROCESS].[method_version], 
+			[dbo].[PROCESS].[instrument], 
+			[dbo].[PROCESS].[nemi_method_id], 
+			[dbo].[PROCESS].[process_type]
+		) 
+		VALUES 
+			(
+				@name, 
+				@description, 
+				@method_name,
+				@method_publisher,
+				@method_code,
+				@method_version, 
+				@instrument, 
+				@nemi_method_id, 
+				@process_type
+			);

@@ -22,3 +22,7 @@
 GO
 EXECUTE sp_addextendedproperty @name = N'Description', @value = N'The PROTOCOL table stores data for protocols used for collecting samples and making measurements (both in the field and on samples).  All fields are required.  PROTOCOL records are referenced by SAMPLE and OBSERVATION records.', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'PROCESS';
 
+
+GO
+
+CREATE INDEX [IX_PROCESS_process_name] ON [dbo].[PROCESS] ([process_name])
