@@ -1,3 +1,0 @@
-﻿CREATE LOGIN [ROSE\jlaw]
-    FROM WINDOWS WITH DEFAULT_DATABASE = [pubs], DEFAULT_LANGUAGE = [us_english];
-
